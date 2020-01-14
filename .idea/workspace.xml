@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96284397-c7f5-4578-87c0-e3bc78f63047" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_easyexcel_1_1_2_beta5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_quartz_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/easyexcel-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/main/java/com/jinhaoxun/easyexceldemo/EasyexcelDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/main/java/com/jinhaoxun/easyexceldemo/listener/ExcelListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/main/java/com/jinhaoxun/easyexceldemo/request/ExcelPropertyIndexModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/main/java/com/jinhaoxun/easyexceldemo/util/ExcelUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/easyexcel-demo/src/test/java/com/jinhaoxun/easyexceldemo/EasyexcelDemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quartz-demo/quartz-demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quartz-demo/src/test/java/com/jinhaoxun/quartzdemo/QuartzDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quartz-demo/src/test/java/com/jinhaoxun/quartzdemo/QuartzDemoApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Idea\springboot-demo\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\MavenWarehouse" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.2-bin/apache-maven-3.6.2" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1WKsCrq5Rld8jd7Pc3yihBfm7Be" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.EasyexcelDemoApplicationTests.writerExcel">
+    <configuration name="EasyexcelDemoApplicationTests.exportExcel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easyexcel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jinhaoxun.easyexceldemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jinhaoxun.easyexceldemo" />
+      <option name="MAIN_CLASS_NAME" value="com.jinhaoxun.easyexceldemo.EasyexcelDemoApplicationTests" />
+      <option name="METHOD_NAME" value="exportExcel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EasyexcelDemoApplicationTests.writerExcel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="easyexcel-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jinhaoxun.easyexceldemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jinhaoxun.easyexceldemo" />
+      <option name="MAIN_CLASS_NAME" value="com.jinhaoxun.easyexceldemo.EasyexcelDemoApplicationTests" />
+      <option name="METHOD_NAME" value="writerExcel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuartzDemoApplicationTests.addSimpleJobTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quartz-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jinhaoxun.quartz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jinhaoxun.quartz" />
+      <option name="MAIN_CLASS_NAME" value="com.jinhaoxun.quartz.QuartzDemoApplicationTests" />
+      <option name="METHOD_NAME" value="addSimpleJobTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EasyexcelDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="easyexcel-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jinhaoxun.easyexceldemo.EasyexcelDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuartzDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="quartz-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jinhaoxun.quartz.QuartzDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EasyexcelDemoApplicationTests.writerExcel" />
+        <item itemvalue="JUnit.EasyexcelDemoApplicationTests.exportExcel" />
+        <item itemvalue="JUnit.QuartzDemoApplicationTests.addSimpleJobTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96284397-c7f5-4578-87c0-e3bc78f63047" name="Default Changelist" comment="" />
+      <created>1578909495571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578909495571</updated>
+      <workItem from="1578909506386" duration="172000" />
+      <workItem from="1578985625960" duration="205000" />
+      <workItem from="1578985861490" duration="14000" />
+      <workItem from="1578986658802" duration="5677000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="368" y="0" key="CommitChangelistDialog2" timestamp="1578909676757">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="368" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578909676757" />
+    <state x="184" y="91" key="DiffContextDialog" timestamp="1578987777743">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="91" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578987777743" />
+    <state x="690" y="214" key="FileChooserDialogImpl" timestamp="1578909532497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="214" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1578909532497" />
+    <state width="422" height="355" key="Git.Branch.Popup" timestamp="1578992143617">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="422" height="355" key="Git.Branch.Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578992143617" />
+    <state width="1867" height="288" key="GridCell.Tab.0.bottom" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.0.center" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.0.left" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.0.right" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.1.bottom" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.1.center" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.1.left" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state width="1867" height="288" key="GridCell.Tab.1.right" timestamp="1578994221544">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="288" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578994221544" />
+    <state x="612" y="60" key="RollbackChangesDialog" timestamp="1578987778416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="612" y="60" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578987778416" />
+    <state x="345" y="0" key="SettingsEditor" timestamp="1578988161218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="345" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578988161218" />
+    <state x="720" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578985689946">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578985689946" />
+    <state x="53" y="219" width="1598" height="701" key="new project wizard" timestamp="1578987820934">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="53" y="219" width="1598" height="701" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1578987820934" />
+  </component>
+</project>

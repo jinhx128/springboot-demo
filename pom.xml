@@ -18,6 +18,7 @@
     <!-- 聚合工程 -->
     <modules>
         <module>quartz-demo</module>
+        <module>easyexcel-demo</module>
     </modules>
 
 

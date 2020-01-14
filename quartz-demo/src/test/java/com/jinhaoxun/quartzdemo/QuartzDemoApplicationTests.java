@@ -3,7 +3,7 @@ package com.jinhaoxun.quartzdemo;
 import com.jinhaoxun.quartzdemo.manager.QuartzManager;
 import com.jinhaoxun.quartzdemo.request.AddCronJobServiceReq;
 import com.jinhaoxun.quartzdemo.request.AddSimpleJobServiceReq;
-import net.minidev.json.JSONObject;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @SpringBootTest
 class QuartzDemoApplicationTests {
 
