@@ -5,8 +5,6 @@ import com.alibaba.excel.metadata.BaseRowModel;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-
 /**
  * @Description:
  * @Author: jinhaoxun
@@ -15,7 +13,18 @@ import java.util.Date;
  */
 @Getter
 @Setter
-public class ExcelPropertyIndexModel extends BaseRowModel {
+public class ExcelModel1 extends BaseRowModel {
+
+    public ExcelModel1(){
+    }
+
+    public ExcelModel1(String dateJuly, String onDuty, String offDuty, String overtime, String last){
+        this.dateJuly = dateJuly;
+        this.onDuty = onDuty;
+        this.offDuty = offDuty;
+        this.overtime = overtime;
+        this.last = last;
+    }
 
     @ExcelProperty(value = "日期", index = 0)
     private String dateJuly;
@@ -25,7 +34,7 @@ public class ExcelPropertyIndexModel extends BaseRowModel {
     private String offDuty;
     @ExcelProperty(value = "加班时长", index = 3)
     private String overtime;
-    @ExcelProperty(value = "备注", index = 6)
+    @ExcelProperty(value = "备注", index = 4)
     private String last;
 
 }
