@@ -1,4 +1,4 @@
-package com.jinhaoxun.fileuploaddownloaddemo.util.ftputil;
+package com.jinhaoxun.filedemo.util.ftputil;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;

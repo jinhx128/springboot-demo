@@ -19,7 +19,7 @@
     <modules>
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
-        <module>fileuploaddownload-demo</module>
+        <module>file-demo</module>
     </modules>
 
 

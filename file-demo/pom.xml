@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jinhaoxun</groupId>
-    <artifactId>fileuploaddownload-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>fileuploaddownload-demo</name>
-    <description>FileUploadDownload Demo</description>
+    <artifactId>file-demo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>file-demo</name>
+    <description>File Demo</description>
 
     <properties>
         <java.version>1.8</java.version>

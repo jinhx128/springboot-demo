@@ -1,10 +1,12 @@
-package com.jinhaoxun.fileuploaddownloaddemo.util.sftputil;
+package com.jinhaoxun.filedemo.util.sftputil;
 
 
 import com.jcraft.jsch.*;
 import org.apache.commons.io.IOUtils;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.Vector;
 

@@ -1,13 +1,13 @@
-package com.jinhaoxun.fileuploaddownloaddemo;
+package com.jinhaoxun.filedemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FileuploaddownloadDemoApplication {
+public class FileDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FileuploaddownloadDemoApplication.class, args);
+        SpringApplication.run(FileDemoApplication.class, args);
     }
 
 }

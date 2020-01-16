@@ -1,20 +1,21 @@
-package com.jinhaoxun.fileuploaddownloaddemo;
+package com.jinhaoxun.filedemo;
 
-import com.jinhaoxun.fileuploaddownloaddemo.util.sftputil.SftpUtil;
+import com.jinhaoxun.filedemo.util.sftputil.SftpUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.io.*;
-import java.util.List;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.Vector;
 
 @Slf4j
 @SpringBootTest
-class FileuploaddownloadDemoApplicationTests {
+class FileDemoApplicationTests {
 
     @Test
-    void contextLoads() throws Exception {
+    void contextLoads() {
     }
 
     @Test
@@ -44,5 +45,4 @@ class FileuploaddownloadDemoApplicationTests {
                 22, null,"/usr/local/testfile/");
         log.info(fileList.toString());
     }
-
 }
