@@ -6,10 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Description:
+ * @Description: 生成excel文件数据字段模板
  * @Author: jinhaoxun
  * @Date: 2020/1/14 15:45
- * @Version: 1.0
+ * @Version: 1.0.0
  */
 @Getter
 @Setter

@@ -6,10 +6,10 @@ import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
 
 /**
- * @version: 1.0
- * @author jinhaoxun
- * @date 2020-01-09
- * @description Job测试类
+ * @Description: Job测试类
+ * @Author: jinhaoxun
+ * @Date: 2020/1/15 11:20
+ * @Version: 1.0.0
  */
 @Slf4j
 public class JobTest implements Job {

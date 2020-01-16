@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import static org.quartz.DateBuilder.futureDate;
 
 /**
- * @version 1.0
- * @author jinhaoxun
- * @date 2020-01-09
- * @description Quartz管理操作类
+ * @Description: Quartz管理操作类
+ * @Author: jinhaoxun
+ * @Date: 2020/1/15 11:20
+ * @Version: 1.0.0
  */
 @Slf4j
 @Service

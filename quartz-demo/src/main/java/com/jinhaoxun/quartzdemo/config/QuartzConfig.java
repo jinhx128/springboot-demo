@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 /**
- * @version 1.0
- * @author jinhaoxun
- * @date 2020-01-09
- * @description Quartz配置
+ * @Description: Quartz配置
+ * @Author: jinhaoxun
+ * @Date: 2020/1/15 11:20
+ * @Version: 1.0.0
  */
 @Slf4j
 @Configuration

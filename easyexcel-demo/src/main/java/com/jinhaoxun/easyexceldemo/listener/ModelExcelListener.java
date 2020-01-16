@@ -9,7 +9,7 @@ import java.util.List;
  * @Description: 模型解析监听器 -- 每解析一行会回调invoke()方法，整个excel解析结束会执行doAfterAllAnalysed()方法
  * @Author: jinhaoxun
  * @Date: 2020/1/14 15:51
- * @Version: 1.0
+ * @Version: 1.0.0
  */
 public class ModelExcelListener<E> extends AnalysisEventListener<E> {
 

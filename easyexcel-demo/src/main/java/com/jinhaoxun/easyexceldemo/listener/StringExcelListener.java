@@ -10,7 +10,7 @@ import java.util.List;
  * @Description: StringList 解析监听器
  * @Author: jinhaoxun
  * @Date: 2020/1/15 11:31
- * @Version: 1.0
+ * @Version: 1.0.0
  */
 public class StringExcelListener extends AnalysisEventListener {
     /**

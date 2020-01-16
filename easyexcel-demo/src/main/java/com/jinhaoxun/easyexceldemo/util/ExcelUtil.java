@@ -18,23 +18,26 @@ import java.util.Map;
 
 /**
  * @Description: excel导入导出工具类
- *      1.支持按行导入字符串方式
- *      2.支持导入实体类映射
- *      3.支持按行导出字符串方式
- *      4.支持导出实体类映射
+ * 1.支持按行导入字符串方式
+ * 2.支持导入实体类映射
+ * 3.支持按行导出字符串方式
+ * 4.支持导出实体类映射
  * @Author: jinhaoxun
  * @Date: 2020/1/15 11:20
- * @Version: 1.0
+ * @Version: 1.0.0
  */
 public class ExcelUtil {
 
     /**
-     * 使用 StringList 来读取Excel
+     * @Author: jinhaoxun
+     * @Description: 使用 StringList 来读取Excel
      * @param inputStream Excel的输入流
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
-     * @return 返回 StringList 的列表
+     * @Date: 2020/1/16 21:40
+     * @Return: java.util.List<java.util.List<java.lang.String>>
+     * @Throws: Exception
      */
-    public static List<List<String>> readExcel(InputStream inputStream, ExcelTypeEnum excelTypeEnum) {
+    public static List<List<String>> readExcel(InputStream inputStream, ExcelTypeEnum excelTypeEnum) throws Exception{
         StringExcelListener listener = new StringExcelListener();
         ExcelReader excelReader = new ExcelReader(inputStream, excelTypeEnum, null, listener);
         excelReader.read();
@@ -42,13 +45,16 @@ public class ExcelUtil {
     }
 
     /**
-     * 使用 模型 来读取Excel
+     * @Author: jinhaoxun
+     * @Description: 使用模型来读取Excel
      * @param inputStream Excel的输入流
      * @param clazz 模型的类
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
-     * @return 返回 模型 的列表
+     * @Date: 2020/1/16 21:41
+     * @Return: java.util.List<E>
+     * @Throws: Exception
      */
-    public static <E> List<E> readExcel(InputStream inputStream, Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum) {
+    public static <E> List<E> readExcel(InputStream inputStream, Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum) throws Exception {
         // 解析每行结果在listener中处理
         ModelExcelListener<E> listener = new ModelExcelListener<E>();
         ExcelReader excelReader = new ExcelReader(inputStream, excelTypeEnum, null, listener);
@@ -58,13 +64,28 @@ public class ExcelUtil {
     }
 
     /**
-     * 使用 StringList 来写入Excel，单sheet，单table
+     * @Author: jinhaoxun
+     * @Description: 使用StringList来写入Excel，单sheet，单table
      * @param outputStream Excel的输出流
      * @param data 要写入的以StringList为单位的数据
      * @param table 配置Excel的表的属性
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
+     * @Date: 2020/1/16 21:42
+     * @Return: void
+     * @Throws: Exception
      */
-    public static void writeExcel(OutputStream outputStream, List<List<String>> data, Table table, ExcelTypeEnum excelTypeEnum) {
+    public static void writeExcel(OutputStream outputStream, List<List<String>> data, Table table, ExcelTypeEnum excelTypeEnum) throws Exception {
+        /**
+         * @Author: jinhaoxun
+         * @Description:
+         * @param outputStream
+         * @param data
+         * @param table
+         * @param excelTypeEnum
+         * @Date: 2020/1/16 21:42
+         * @Return: void
+         * @Throws:
+         */
         //这里指定不需要表头，因为String通常表头已被包含在data里
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,false);
         //写第一个sheet, sheet1  数据全是List<String> 无模型映射关系,无表头
@@ -73,16 +94,18 @@ public class ExcelUtil {
         writer.finish();
     }
 
-
     /**
-     * 使用 StringList 来写入Excel，单sheet，单table（返回byte数组）
+     * @Author: jinhaoxun
+     * @Description: 使用StringList来写入Excel，单sheet，单table（返回byte数组）
      * @param outputStream Excel的输出流
      * @param data 要写入的以StringList为单位的数据
      * @param table 配置Excel的表的属性
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
-     * @return   excel字节数组
+     * @Date: 2020/1/16 21:43
+     * @Return: byte[]
+     * @Throws: Exception
      */
-    public static byte[] writeExcel(ByteArrayOutputStream outputStream, List<List<String>> data, Table table, ExcelTypeEnum excelTypeEnum) {
+    public static byte[] writeExcel(ByteArrayOutputStream outputStream, List<List<String>> data, Table table, ExcelTypeEnum excelTypeEnum) throws Exception {
         //这里指定不需要表头，因为String通常表头已被包含在data里
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,false);
         //写第一个sheet, sheet1  数据全是List<String> 无模型映射关系,无表头
@@ -93,14 +116,18 @@ public class ExcelUtil {
     }
 
     /**
-     * 使用 模型 来写入Excel，单sheet，单table
+     * @Author: jinhaoxun
+     * @Description: 使用模型来写入Excel，单sheet，单table
      * @param outputStream Excel的输出流
      * @param data 要写入的以 模型 为单位的数据
      * @param clazz 模型的类
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
+     * @Date: 2020/1/16 21:43
+     * @Return: byte[]
+     * @Throws: Exception
      */
     public static void writeExcel(OutputStream outputStream, List<? extends BaseRowModel> data,
-                                  Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum)  {
+                                  Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum) throws Exception {
         //这里指定需要表头，因为model通常包含表头信息
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,true);
         //写第一个sheet, sheet1  数据全是List<String> 无模型映射关系
@@ -110,15 +137,18 @@ public class ExcelUtil {
     }
 
     /**
-     * 使用 模型 来写入Excel，单sheet，单table （返回字节数组）
+     * @Author: jinhaoxun
+     * @Description: 使用模型来写入Excel，单sheet，单table（返回字节数组）
      * @param outputStream Excel的输出流
      * @param data 要写入的以 模型 为单位的数据
      * @param clazz 模型的类
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
-     * @return excel字节数组
+     * @Date: 2020/1/16 21:43
+     * @Return: byte[]
+     * @Throws: Exception
      */
     public static byte[] writeExcel(ByteArrayOutputStream outputStream, List<? extends BaseRowModel> data,
-                                    Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum)  {
+                                    Class<? extends BaseRowModel> clazz, ExcelTypeEnum excelTypeEnum) throws Exception {
         //这里指定需要表头，因为model通常包含表头信息
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,true);
         //写第一个sheet, sheet1  数据全是List<String> 无模型映射关系
@@ -129,16 +159,19 @@ public class ExcelUtil {
     }
 
     /**
-     *使用 模型 来写入Excel，多sheet，单table （返回字节数组）
+     * @Author: jinhaoxun
+     * @Description: 使用模型来写入Excel，多sheet，单table （返回字节数组）
      * @param outputStream Excel的输出流
      * @param sheetName  sheet名集合
      * @param datas  要写入的以 模型 为单位的数据
      * @param clazzs  模型的类
      * @param excelTypeEnum  Excel的格式(XLS或XLSX)
-     * @return
+     * @Date: 2020/1/16 21:43
+     * @Return: byte[]
+     * @Throws: Exception
      */
     public static byte[] writeExcel(ByteArrayOutputStream outputStream,List<String> sheetName,List<List<? extends BaseRowModel>> datas,
-                                    List<Class<? extends BaseRowModel>> clazzs, ExcelTypeEnum excelTypeEnum)  {
+                                    List<Class<? extends BaseRowModel>> clazzs, ExcelTypeEnum excelTypeEnum) throws Exception {
         //这里指定需要表头，因为model通常包含表头信息
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,true);
         if (sheetName.size()!=datas.size()||datas.size()!=clazzs.size()){
@@ -156,17 +189,20 @@ public class ExcelUtil {
     }
 
     /**
-     *  使用 模型 来写入Excel，多sheet，多table
+     * @Author: jinhaoxun
+     * @Description: 使用模型来写入Excel，多sheet，多table
      * @param outputStream  Excel的输出流
      * @param sheetAndTable sheet和table名，格式：<sheet名，<table名集合>>
      * @param data   <sheet名，<table名，table数据集>>
      * @param clazz  <sheet名，<table名，table数据集实体class类型>>
      * @param excelTypeEnum Excel的格式(XLS或XLSX)
-     * @return excel字节数组
+     * @Date: 2020/1/16 21:43
+     * @Return: byte[]
+     * @Throws: Exception
      */
     public static byte[] writeExcel(ByteArrayOutputStream outputStream,Map<String,List<String>> sheetAndTable,
                                     Map<String,Map<String,List<? extends BaseRowModel>>> data,Map<String,Map<String,Class<? extends BaseRowModel>>> clazz,
-                                    ExcelTypeEnum excelTypeEnum){
+                                    ExcelTypeEnum excelTypeEnum) throws Exception {
 
         //这里指定需要表头，因为model通常包含表头信息
         ExcelWriter writer = new ExcelWriter(outputStream, excelTypeEnum,true);

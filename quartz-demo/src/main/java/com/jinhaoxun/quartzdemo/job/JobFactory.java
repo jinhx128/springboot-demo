@@ -6,10 +6,10 @@ import org.springframework.scheduling.quartz.AdaptableJobFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * @version 1.0
- * @author jinhaoxun
- * @date 2020-01-09
- * @description Quartz创建JobFactory实例
+ * @Description: Quartz创建JobFactory实例
+ * @Author: jinhaoxun
+ * @Date: 2020/1/15 11:20
+ * @Version: 1.0.0
  */
 @Component
 public class JobFactory extends AdaptableJobFactory {
