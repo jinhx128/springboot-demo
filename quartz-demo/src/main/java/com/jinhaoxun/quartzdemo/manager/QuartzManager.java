@@ -1,7 +1,8 @@
 package com.jinhaoxun.quartzdemo.manager;
 
-import com.jinhaoxun.quartzdemo.request.AddCronJobServiceReq;
-import com.jinhaoxun.quartzdemo.request.AddSimpleJobServiceReq;
+import com.jinhaoxun.quartzdemo.request.AddCronJobReq;
+import com.jinhaoxun.quartzdemo.request.AddSimpleJobReq;
+import com.jinhaoxun.quartzdemo.request.DeleteJobReq;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.stereotype.Service;
@@ -37,27 +38,27 @@ public class QuartzManager {
     /**
      * @author jinhaoxun
      * @description 添加一个Simple定时任务，只执行一次的定时任务
-     * @param addSimpleJobServiceReq 参数对象
+     * @param addSimpleJobReq 参数对象
      * @param taskId 任务ID，不能同名
      * @throws RuntimeException
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
-    public void addSimpleJob(AddSimpleJobServiceReq addSimpleJobServiceReq, String taskId) throws Exception {
-        String jobUrl = jobUri + addSimpleJobServiceReq.getJobClass();
+    public void addSimpleJob(AddSimpleJobReq addSimpleJobReq, String taskId) throws Exception {
+        String jobUrl = jobUri + addSimpleJobReq.getJobClass();
         try {
             Class<? extends Job> aClass = (Class<? extends Job>) Class.forName(jobUrl).newInstance().getClass();
             // 任务名，任务组，任务执行类
             JobDetail job = JobBuilder.newJob(aClass).withIdentity(taskId,
                     "JobGroup").build();
             //增加任务ID参数
-            addSimpleJobServiceReq.getParams().put("taskId",taskId);
+            addSimpleJobReq.getParams().put("taskId",taskId);
             // 添加任务参数
-            job.getJobDataMap().putAll(addSimpleJobServiceReq.getParams());
+            job.getJobDataMap().putAll(addSimpleJobReq.getParams());
             // 转换为时间差，秒单位
-            int time = (int) (addSimpleJobServiceReq.getDate().getTime() - System.currentTimeMillis()) / 1000;
+            int time = (int) (addSimpleJobReq.getDate().getTime() - System.currentTimeMillis()) / 1000;
 
             SimpleTrigger trigger = (SimpleTrigger) TriggerBuilder.newTrigger()
-                    .withIdentity(taskId, taskId+"TiggerGroup")
+                    .withIdentity(taskId, taskId + "TiggerGroup")
                     .startAt(futureDate(time, DateBuilder.IntervalUnit.SECOND))
                     .build();
             // 调度容器设置JobDetail和Trigger
@@ -74,25 +75,25 @@ public class QuartzManager {
     /**
      * @author jinhaoxun
      * @description 添加一个Cron定时任务，循环不断执行的定时任务
-     * @param addCronJobServiceReq 参数对象
+     * @param addCronJobReq 参数对象
      * @throws Exception
      */
     @SuppressWarnings({ "unchecked", "rawtypes" })
-    public void addCronJob(AddCronJobServiceReq addCronJobServiceReq) throws Exception {
-        String jobUrl = jobUri + addCronJobServiceReq.getJobClass();
+    public void addCronJob(AddCronJobReq addCronJobReq) throws Exception {
+        String jobUrl = jobUri + addCronJobReq.getJobClass();
         try {
             Class<? extends Job> aClass = (Class<? extends Job>) Class.forName(jobUrl).newInstance().getClass();
             // 任务名，任务组，任务执行类
-            JobDetail job = JobBuilder.newJob(aClass).withIdentity(addCronJobServiceReq.getJobName(),
-                    addCronJobServiceReq.getJobGroupName()).build();
+            JobDetail job = JobBuilder.newJob(aClass).withIdentity(addCronJobReq.getJobName(),
+                    addCronJobReq.getJobGroupName()).build();
             // 添加任务参数
-            job.getJobDataMap().putAll(addCronJobServiceReq.getParams());
+            job.getJobDataMap().putAll(addCronJobReq.getParams());
             // 创建触发器
             CronTrigger trigger = (CronTrigger) TriggerBuilder.newTrigger()
                     // 触发器名,触发器组
-                    .withIdentity(addCronJobServiceReq.getTriggerName(), addCronJobServiceReq.getTriggerGroupName())
+                    .withIdentity(addCronJobReq.getTriggerName(), addCronJobReq.getTriggerGroupName())
                     // 触发器时间设定
-                    .withSchedule(CronScheduleBuilder.cronSchedule(addCronJobServiceReq.getDate()))
+                    .withSchedule(CronScheduleBuilder.cronSchedule(addCronJobReq.getDate()))
                     .build();
             // 调度容器设置JobDetail和Trigger
             scheduler.scheduleJob(job, trigger);
@@ -142,21 +143,18 @@ public class QuartzManager {
     /**
      * @author jinhaoxun
      * @description 移除一个任务
-     * @param jobName           任务名
-     * @param jobGroupName      任务组名
-     * @param triggerName       触发器名
-     * @param triggerGroupName  触发器组名
+     * @param deleteJobReq     参数对象
      * @throws Exception
      */
-    public void removeJob(String jobName, String jobGroupName, String triggerName, String triggerGroupName) throws Exception {
+    public void removeJob(DeleteJobReq deleteJobReq) throws Exception {
         try {
-            TriggerKey triggerKey = TriggerKey.triggerKey(triggerName, triggerGroupName);
+            TriggerKey triggerKey = TriggerKey.triggerKey(deleteJobReq.getTriggerName(), deleteJobReq.getTriggerGroupName());
             // 停止触发器
             scheduler.pauseTrigger(triggerKey);
             // 移除触发器
             scheduler.unscheduleJob(triggerKey);
             // 删除任务
-            scheduler.deleteJob(JobKey.jobKey(jobName, jobGroupName));
+            scheduler.deleteJob(JobKey.jobKey(deleteJobReq.getJobName(), deleteJobReq.getJobGroupName()));
         } catch (Exception e) {
             log.info("Quartz删除改任务失败");
         }

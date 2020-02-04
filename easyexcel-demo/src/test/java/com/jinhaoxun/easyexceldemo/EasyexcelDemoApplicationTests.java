@@ -25,7 +25,7 @@ class EasyexcelDemoApplicationTests {
     }
 
     @Test
-    void redExcelTest() throws Exception {
+    void readExcelTest() throws Exception {
         //读取excel
         File file = new File("E:\\2.xlsx");
         InputStream inputStream = new FileInputStream(file);

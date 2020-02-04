@@ -11,7 +11,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class DeleteJobServiceReq {
+public class DeleteJobReq {
 
     private String jobName;
 

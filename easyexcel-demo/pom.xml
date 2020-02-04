@@ -41,7 +41,7 @@
             </exclusions>
         </dependency>
 
-        <!-- 阿里开源EXCEL -->
+        <!-- 阿里开源框架easyexcel -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>

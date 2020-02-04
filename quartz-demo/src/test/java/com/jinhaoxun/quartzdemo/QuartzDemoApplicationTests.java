@@ -1,8 +1,9 @@
 package com.jinhaoxun.quartzdemo;
 
 import com.jinhaoxun.quartzdemo.manager.QuartzManager;
-import com.jinhaoxun.quartzdemo.request.AddCronJobServiceReq;
-import com.jinhaoxun.quartzdemo.request.AddSimpleJobServiceReq;
+import com.jinhaoxun.quartzdemo.request.AddCronJobReq;
+import com.jinhaoxun.quartzdemo.request.AddSimpleJobReq;
+import com.jinhaoxun.quartzdemo.request.DeleteJobReq;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,11 +36,11 @@ class QuartzDemoApplicationTests {
         beforeTime.add(Calendar.SECOND, 5);
         Date beforeDate = beforeTime.getTime();
 
-        AddSimpleJobServiceReq addSimpleJobServiceReq = new AddSimpleJobServiceReq();
-        addSimpleJobServiceReq.setDate(beforeDate);
-        addSimpleJobServiceReq.setJobClass("JobTest");
-        addSimpleJobServiceReq.setParams(params);
-        quartzManager.addSimpleJob(addSimpleJobServiceReq, "123");
+        AddSimpleJobReq addSimpleJobReq = new AddSimpleJobReq();
+        addSimpleJobReq.setDate(beforeDate);
+        addSimpleJobReq.setJobClass("JobTest");
+        addSimpleJobReq.setParams(params);
+        quartzManager.addSimpleJob(addSimpleJobReq, "123");
         // 让主线程睡眠60秒
         Thread.currentThread().sleep(60000);
     }
@@ -49,23 +50,46 @@ class QuartzDemoApplicationTests {
         Map<String, String> params = new HashMap<>();
         params.put("id","测试id");
         params.put("name","测试name");
-        AddCronJobServiceReq addCronJobServiceReq = new AddCronJobServiceReq();
+        AddCronJobReq addCronJobReq = new AddCronJobReq();
         //每 5 秒执行一次
-        addCronJobServiceReq.setDate("0/5 * * * * ?");
-        addCronJobServiceReq.setJobClass("JobTest");
-        addCronJobServiceReq.setJobGroupName("JobGroupName");
-        addCronJobServiceReq.setJobName("JobName");
-        addCronJobServiceReq.setParams(params);
-        addCronJobServiceReq.setTriggerGroupName("triggerGroupName");
-        addCronJobServiceReq.setTriggerName("triggerName");
-        quartzManager.addCronJob(addCronJobServiceReq);
+        addCronJobReq.setDate("0/5 * * * * ?");
+        addCronJobReq.setJobClass("JobTest");
+        addCronJobReq.setJobGroupName("JobGroupName");
+        addCronJobReq.setJobName("JobName");
+        addCronJobReq.setParams(params);
+        addCronJobReq.setTriggerGroupName("triggerGroupName");
+        addCronJobReq.setTriggerName("triggerName");
+        quartzManager.addCronJob(addCronJobReq);
         // 让主线程睡眠60秒
         Thread.currentThread().sleep(60000);
     }
 
     @Test
     void removeJobTest() throws Exception {
-        quartzManager.removeJob("jobName", "jobGroupName","triggerName", "triggerGroupName");
+        Map<String, String> params = new HashMap<>();
+        params.put("id","测试id");
+        params.put("name","测试name");
+
+        Calendar beforeTime = Calendar.getInstance();
+        // 5 秒之后的时间
+        beforeTime.add(Calendar.SECOND, 5);
+        Date beforeDate = beforeTime.getTime();
+
+        AddSimpleJobReq addSimpleJobReq = new AddSimpleJobReq();
+        addSimpleJobReq.setDate(beforeDate);
+        addSimpleJobReq.setJobClass("JobTest");
+        addSimpleJobReq.setParams(params);
+        quartzManager.addSimpleJob(addSimpleJobReq, "123");
+
+        DeleteJobReq deleteJobReq = new DeleteJobReq();
+        deleteJobReq.setJobName("123");
+        deleteJobReq.setJobGroupName("123JobGroup");
+        deleteJobReq.setTriggerName("123");
+        deleteJobReq.setTriggerGroupName("123TiggerGroup");
+        quartzManager.removeJob(deleteJobReq);
+        // 让主线程睡眠60秒
+        Thread.currentThread().sleep(60000);
+
     }
 
     @Test
