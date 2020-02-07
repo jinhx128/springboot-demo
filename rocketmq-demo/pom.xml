@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jinhaoxun</groupId>
-    <artifactId>quartz-demo</artifactId>
+    <artifactId>rocketmq-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>quartz-demo</name>
-    <description>Quartz Demo</description>
+    <name>rocketmq-demo</name>
+    <description>RocketMQ Demo</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -41,11 +41,13 @@
             </exclusions>
         </dependency>
 
-        <!-- Quartz -->
+        <!-- RocketMQ -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.0.4</version>
         </dependency>
+
     </dependencies>
 
     <build>

@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>springboot-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -20,6 +20,9 @@
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
         <module>file-demo</module>
+        <module>shiro-demo</module>
+        <module>redis-demo</module>
+        <module>rocketmq-demo</module>
     </modules>
 
 

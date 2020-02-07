@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jinhaoxun</groupId>
-    <artifactId>quartz-demo</artifactId>
+    <artifactId>shiro-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>quartz-demo</name>
-    <description>Quartz Demo</description>
+    <name>shiro-demo</name>
+    <description>Shiro Demo</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,6 +22,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jinhaoxun</groupId>
+            <artifactId>redis-demo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -41,11 +47,6 @@
             </exclusions>
         </dependency>
 
-        <!-- Quartz -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
