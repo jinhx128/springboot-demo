@@ -1,0 +1,6 @@
+# 指定自定义命名的配置文件
+logging:
+  config: classpath:logback-custom.xml
+# 打印日志统一根路径
+log:
+  file: D:/log

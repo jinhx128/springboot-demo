@@ -23,6 +23,8 @@
         <module>shiro-demo</module>
         <module>redis-demo</module>
         <module>rocketmq-demo</module>
+        <module>mybatisplus-demo</module>
+        <module>logback-demo</module>
     </modules>
 
 

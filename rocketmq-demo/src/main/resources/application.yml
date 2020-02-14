@@ -3,6 +3,6 @@ rocketmq:
   # name-server: 47.101.135.160:9876;xxx
   name-server: 47.101.135.160:9876
   producer:
-    group: dubbo-demo-service-manager-producer-group-1
+    group: dubbo-demo-service-manager-producer-group-1 #生产者
   consumer:
-    group: dubbo-demo-service-manager-consumer-group-1
+    group: dubbo-demo-service-manager-consumer-group-1 #消费者

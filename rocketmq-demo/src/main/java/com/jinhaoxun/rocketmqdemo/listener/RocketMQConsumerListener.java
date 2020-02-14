@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-@RocketMQMessageListener(topic = "topic1", consumeMode = ConsumeMode.ORDERLY, consumerGroup = "${rocketmq.consumer.group}")
+@RocketMQMessageListener(topic = "topic1", selectorExpression = "tag1", consumeMode = ConsumeMode.ORDERLY, consumerGroup = "${rocketmq.consumer.group}")
 public class RocketMQConsumerListener implements RocketMQListener<String> {
 
     @Override

@@ -1,5 +1,6 @@
 package com.jinhaoxun.rocketmqdemo.request;
 
+import com.jinhaoxun.rocketmqdemo.message.Message;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,6 @@ public class AddMessageReq {
 
     private String tag;
 
-    private String message;
+    private Message<String> message;
 
 }
