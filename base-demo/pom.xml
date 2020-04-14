@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.4.RELEASE</version>
+        <version>2.2.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jinhaoxun</groupId>
-    <artifactId>easyexcel-demo</artifactId>
+    <artifactId>base-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>easyexcel-demo</name>
-    <description>EasyExcel Demo</description>
+    <name>base-demo</name>
+    <description>Base Demo</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -38,29 +38,6 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <!-- 阿里开源框架EasyExcel -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>easyexcel</artifactId>
-            <version>2.1.6</version>
-        </dependency>
-        <!-- 将excel转成csv格式的poi依赖 -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <!-- 公共工具包依赖 -->
-        <dependency>
-            <groupId>com.jinhaoxun</groupId>
-            <artifactId>base-demo</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -29,7 +29,7 @@ class FileDemoApplicationTests {
     @Test
     void downLoadFileTest() throws Exception {
         SftpUtil.downloadFile("root", "Ajinhaoxun123456", "47.101.135.160", 22,null,
-                "/usr/local/testfile/", "test.xlsx","D:\\test.xlsx");
+                "/usr/local/testfile/", "test.csv","/Users/ao/Desktop/test.csv");
     }
 
     @Test

@@ -17,6 +17,7 @@
 
     <!-- 聚合工程 -->
     <modules>
+        <module>base-demo</module>
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
         <module>file-demo</module>
@@ -25,6 +26,7 @@
         <module>rocketmq-demo</module>
         <module>mybatisplus-demo</module>
         <module>logback-demo</module>
+        <module>thymeleaf-demo</module>
     </modules>
 
 

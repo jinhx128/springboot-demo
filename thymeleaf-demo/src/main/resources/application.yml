@@ -1,0 +1,12 @@
+spring:
+  thymeleaf:
+    cache: false
+    mode: html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+
+server:
+  port: 8180
+  servlet:
+    context-path: /templates

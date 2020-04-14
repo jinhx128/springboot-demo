@@ -2,9 +2,11 @@ package com.jinhaoxun.easyexceldemo;
 
 import com.alibaba.excel.metadata.BaseRowModel;
 import com.alibaba.excel.support.ExcelTypeEnum;
+import com.jinhaoxun.basedemo.util.DataConvertUtil;
 import com.jinhaoxun.easyexceldemo.request.ExcelModel;
 import com.jinhaoxun.easyexceldemo.request.ExcelModel1;
 import com.jinhaoxun.easyexceldemo.request.ExcelModel2;
+import com.jinhaoxun.easyexceldemo.util.ExcelConvertCsvUtil;
 import com.jinhaoxun.easyexceldemo.util.ExcelUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
@@ -103,6 +105,15 @@ class EasyexcelDemoApplicationTests {
         byte[] bytes = ExcelUtil.writeExcel(outputStream1,sheetAndTable,data,clazz,ExcelTypeEnum.XLSX);
         FileOutputStream outputStream = new FileOutputStream(file1);
         outputStream.write(bytes);
+    }
+
+    @Test
+    void convertExcelToCsvTest() throws Exception {
+        //读取excel
+        File file = new File("/Users/ao/Desktop/activitycode_20200414102350.xlsx");
+        InputStream inputStream = new FileInputStream(file);
+        byte[] bytes = DataConvertUtil.inputStreamTobyte2(inputStream);
+        ExcelConvertCsvUtil.convertExcelToCsv(bytes);
     }
 
     @BeforeEach
