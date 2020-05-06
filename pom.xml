@@ -27,6 +27,7 @@
         <module>mybatisplus-demo</module>
         <module>logback-demo</module>
         <module>thymeleaf-demo</module>
+        <module>webmagic-demo</module>
     </modules>
 
 

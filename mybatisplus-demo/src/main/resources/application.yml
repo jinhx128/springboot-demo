@@ -5,7 +5,17 @@ spring:
     url: jdbc:mysql://47.101.135.160:3306/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
-    type: com.alibaba.druid.pool.DruidDataSource
+    type: com.zaxxer.hikari.HikariDataSource
+    # hikari
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
 
 # mybatis-plus相关配置
 mybatis-plus:
