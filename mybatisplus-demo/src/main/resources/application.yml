@@ -20,7 +20,7 @@ spring:
 # mybatis-plus相关配置
 mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
-  mapper-locations: classpath:com/jinhaoxun/mybatisplusdemo/mapper/xml/*.xml
+  mapper-locations: classpath:com/jinhaoxun/mybatisplus/mapper/xml/*.xml
   # 以下配置均有默认值,可以不设置
   global-config:
     db-config:

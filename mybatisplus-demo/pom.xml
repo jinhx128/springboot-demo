@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.4.RELEASE</version>
+		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jinhaoxun</groupId>
@@ -58,8 +58,8 @@
 		<!-- 引入阿里数据库连接池 -->
 <!--		<dependency>-->
 <!--			<groupId>com.alibaba</groupId>-->
-<!--			<artifactId>druid</artifactId>-->
-<!--			<version>1.1.6</version>-->
+<!--			<artifactId>druid-spring-boot-starter</artifactId>-->
+<!--			<version>1.1.22</version>-->
 <!--		</dependency>-->
 		<!-- 主要增加 HikariCP 依赖 -->
 		<dependency>
