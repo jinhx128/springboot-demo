@@ -1,12 +1,16 @@
 spring:
   thymeleaf:
-    cache: false
-    mode: html
+    cache: false # 关闭thymeleaf缓存，开发时使用，否则没有实时画面
+    check-template-location: true # 检查模板是否存在，然后再呈现
+    enabled: true  # 启用MVC Thymeleaf视图分辨率
     encoding: utf-8
+    mode: HTML # 指定模板编码
+    prefix: classpath:/templates # 设置thymeleaf路径默认为src/main/resources/templates
     servlet:
-      content-type: text/html
+      content-type: text/html # Content-Type值
+    suffix: .html # 构建URL时附加查看名称的后缀.
 
 server:
-  port: 8180
+  port: 8082
   servlet:
-    context-path: /templates
+    context-path: /templates # 在构建URL时的前缀

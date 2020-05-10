@@ -5,5 +5,9 @@
     <select id="selectByName" parameterType="string" resultType="com.jinhaoxun.mybatisplus.entity.User">
         select * from user where name = #{name};
     </select>
-    
+
+    <update id="updateName">
+        update user set name = #{name} where id = #{id};
+    </update>
+
 </mapper>

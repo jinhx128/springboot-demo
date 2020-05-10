@@ -1,7 +1,7 @@
 package com.jinhaoxun.thymeleaf.service.impl;
 
 import com.jinhaoxun.thymeleaf.pojo.Test;
-import com.jinhaoxun.thymeleaf.service.TestService;
+import com.jinhaoxun.thymeleaf.service.iTestService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,8 +15,15 @@ import java.util.Random;
  * @Version: 1.0.0
  */
 @Service
-public class TestServiceImpl implements TestService {
+public class TestServiceImpl implements iTestService {
 
+    /**
+     * @Author: jinhaoxun
+     * @Description: 随机返回一组数据用于展示
+     * @Date: 2020/5/10 4:43 下午
+     * @Return: java.util.List<com.jinhaoxun.thymeleaf.pojo.Test>
+     * @Throws:
+     */
     @Override
     public List<Test> getTest() {
         List<Test> testList = new ArrayList<>();

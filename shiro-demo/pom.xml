@@ -26,12 +26,6 @@
 
         <dependency>
             <groupId>com.jinhaoxun</groupId>
-            <artifactId>base-demo</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jinhaoxun</groupId>
             <artifactId>redis-demo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

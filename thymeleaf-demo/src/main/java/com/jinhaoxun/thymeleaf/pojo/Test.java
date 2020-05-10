@@ -1,5 +1,7 @@
 package com.jinhaoxun.thymeleaf.pojo;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @Date: 2020/4/12 下午1:24
  * @Version: 1.0.0
  */
+@Data
 public class Test implements Serializable {
 
     private String id;
@@ -15,35 +18,4 @@ public class Test implements Serializable {
     private int age;
     private String sex;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
 }

@@ -55,28 +55,11 @@
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>3.3.1</version>
 		</dependency>
-		<!-- 引入阿里数据库连接池 -->
-<!--		<dependency>-->
-<!--			<groupId>com.alibaba</groupId>-->
-<!--			<artifactId>druid-spring-boot-starter</artifactId>-->
-<!--			<version>1.1.22</version>-->
-<!--		</dependency>-->
-		<!-- 主要增加 HikariCP 依赖 -->
+		<!-- dynamic-datasource-spring-boot-starter 是一个基于springboot的快速集成多数据源的启动器 -->
 		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>${hikaricp.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<exclusions>
-				<!-- 排除 tomcat-jdbc 以使用 HikariCP -->
-				<exclusion>
-					<groupId>org.apache.tomcat</groupId>
-					<artifactId>tomcat-jdbc</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>com.baomidou</groupId>
+			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<!-- mybatisPlus 代码生成器 -->
 		<dependency>

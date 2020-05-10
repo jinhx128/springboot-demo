@@ -23,7 +23,7 @@ public class User implements Serializable {
     /**
      * 主键id
      */
-    private String id;
+    private Integer id;
 
     /**
      * 姓名

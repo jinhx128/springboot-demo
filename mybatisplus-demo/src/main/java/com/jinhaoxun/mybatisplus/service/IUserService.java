@@ -18,9 +18,20 @@ public interface IUserService extends IService<User> {
      * @Description:
      * @param name 姓名
      * @Date: 2020/2/13 下午12:06
-     * @Return: com.jinhaoxun.mybatisplusdemo.entity.User
+     * @Return: com.jinhaoxun.mybatisplus.entity.User
      * @Throws:
      */
     User selectByName(String name);
+
+    /**
+     * @Author: jinhaoxun
+     * @Description:
+     * @param id id
+     * @param name 姓名
+     * @Date: 2020/2/13 下午12:06
+     * @Return: int
+     * @Throws:
+     */
+    int updateName(int id, String name);
 
 }

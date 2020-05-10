@@ -1,6 +1,8 @@
 package com.jinhaoxun.mybatisplus;
 
+import com.jinhaoxun.mybatisplus.entity.Task;
 import com.jinhaoxun.mybatisplus.entity.User;
+import com.jinhaoxun.mybatisplus.service.ITaskService;
 import com.jinhaoxun.mybatisplus.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
@@ -18,16 +20,36 @@ class MybatisplusApplicationTests {
 	@Resource
 	private IUserService iUserService;
 
+	@Resource
+	private ITaskService iTaskService;
+
 	@Test
-	void sqlTest() {
+	void selectApiTest() {
+		log.info("使用MP提供的CRUD");
 		User user = iUserService.getById("1");
 		log.info(user.toString());
 	}
 
 	@Test
-	void customSqlTest() {
+	void selectDb1Test() {
+		// 验证多数据源db1
+		log.info("使用自定义的方法，查看db1");
 		User user = iUserService.selectByName("Jack");
 		log.info(user.toString());
+	}
+
+	@Test
+	void selectDb2Test() {
+		// 验证多数据源db2
+		log.info("使用自定义的方法，查看db2");
+		Task task = iTaskService.selectByName("韩信");
+		log.info(task.toString());
+	}
+
+	@Test
+	void updateDb1Test() {
+		// 验证事务
+		iUserService.updateName(1, "改名啦");
 	}
 
 	@BeforeEach

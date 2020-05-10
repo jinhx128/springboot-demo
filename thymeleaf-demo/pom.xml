@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+        <!-- web依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,12 +41,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
+        <!-- thymeleaf依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
+        <!-- 简化w3c标准开发依赖 -->
         <dependency>
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
