@@ -1,6 +1,7 @@
 package com.jinhaoxun.shiro.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.filter.mgt.FilterChainManager;
 import org.apache.shiro.web.filter.mgt.FilterChainResolver;
@@ -9,10 +10,10 @@ import org.apache.shiro.web.servlet.AbstractShiroFilter;
 import org.springframework.beans.factory.BeanInitializationException;
 
 /**
- * @Description: Shiro配置
- * @Author: jinhaoxun
- * @Date: 2020/1/15 11:20
- * @Version: 1.0.0
+ * @version 1.0
+ * @author jinhaoxun
+ * @date 2018-05-09
+ * @description Shiro配置
  */
 @Slf4j
 public class RestShiroFilterFactoryBean extends ShiroFilterFactoryBean {
@@ -44,7 +45,7 @@ public class RestShiroFilterFactoryBean extends ShiroFilterFactoryBean {
             RestPathMatchingFilterChainResolver chainResolver = new RestPathMatchingFilterChainResolver();
             chainResolver.setFilterChainManager(manager);
             log.debug("创建Shiro过滤器实例成功！");
-            return new RestShiroFilterFactoryBean.SpringShiroFilter((WebSecurityManager)securityManager, chainResolver);
+            return new SpringShiroFilter((WebSecurityManager)securityManager, chainResolver);
         }
     }
 

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.jinhaoxun</groupId>
     <artifactId>rocketmq-demo</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>rocketmq-demo</name>
     <description>RocketMQ Demo</description>
 

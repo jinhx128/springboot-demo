@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.jinhaoxun</groupId>
     <artifactId>multipledatasources-demo</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>multipledatasources-demo</name>
     <description>Multiple Data Sources Demo</description>
 

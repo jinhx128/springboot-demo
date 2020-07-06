@@ -1,0 +1,9 @@
+server:
+  port: 8088
+
+knife4j:
+  production: false
+  basic:
+    enable: true
+    username: root
+    password: root

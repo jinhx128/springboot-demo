@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>springboot-demo</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -29,6 +29,9 @@
         <module>webmagic-demo</module>
         <module>multipledatasources-demo</module>
         <module>swagger-demo</module>
+        <module>knife4j-demo</module>
+        <module>threadpool-demo</module>
+        <module>easyexcel-demo</module>
     </modules>
 
 

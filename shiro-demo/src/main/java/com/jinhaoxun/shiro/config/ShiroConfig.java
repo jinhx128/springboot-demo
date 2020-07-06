@@ -1,11 +1,12 @@
 package com.jinhaoxun.shiro.config;
 
-import com.jinhaoxun.dubbo.org.shiro.cache.CustomCacheManager;
-import com.jinhaoxun.dubbo.org.shiro.filter.CustomLogoutFilter;
-import com.jinhaoxun.dubbo.org.shiro.filter.CustomShiroFilter;
-import com.jinhaoxun.dubbo.org.shiro.realm.CustomRealm;
+import com.jinhaoxun.shiro.cache.CustomCacheManager;
+import com.jinhaoxun.shiro.filter.CustomLogoutFilter;
+import com.jinhaoxun.shiro.filter.CustomShiroFilter;
+import com.jinhaoxun.shiro.realm.CustomRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
+import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
@@ -21,10 +22,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @Description: Shiro配置
- * @Author: jinhaoxun
- * @Date: 2020/1/15 11:20
- * @Version: 1.0.0
+ * @version 1.0
+ * @author jinhaoxun
+ * @date 2018-05-09
+ * @description Shiro配置
  */
 @Configuration
 public class ShiroConfig {

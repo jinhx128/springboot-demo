@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.jinhaoxun</groupId>
     <artifactId>thymeleaf-demo</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>thymeleaf-demo</name>
     <description>Thymeleaf Demo</description>
 

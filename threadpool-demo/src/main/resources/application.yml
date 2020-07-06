@@ -1,0 +1,8 @@
+# 配置线程池
+threadPoolTaskExecutor:
+  corePoolSize: 10 # 核心线程数（默认线程数）
+  maxPoolSize: 100 # 最大线程数
+  keepAliveTime: 10 # 允许线程空闲时间（单位：默认为秒）
+  queueCapacity: 200 # 缓冲队列数
+  threadNamePrefix1: Custom-Executor-1- # 线程名统一前缀
+  threadNamePrefix2: Custom-Executor-2- # 线程名统一前缀

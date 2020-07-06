@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.jinhaoxun</groupId>
 	<artifactId>redis-demo</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>redis-demo</name>
 	<description>Redis Demo</description>
 

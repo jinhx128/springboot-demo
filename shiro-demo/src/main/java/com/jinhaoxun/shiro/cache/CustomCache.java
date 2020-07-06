@@ -1,8 +1,8 @@
 package com.jinhaoxun.shiro.cache;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jinhaoxun.dubbo.constant.AbstractConstant;
-import com.jinhaoxun.dubbo.util.requestutil.JwtUtil;
+import com.jinhaoxun.shiro.common.AbstractConstant;
+import com.jinhaoxun.shiro.util.JwtUtil;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;

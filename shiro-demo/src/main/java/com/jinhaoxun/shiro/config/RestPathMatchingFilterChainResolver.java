@@ -11,10 +11,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * @Description: Shiro配置
- * @Author: jinhaoxun
- * @Date: 2020/1/15 11:20
- * @Version: 1.0.0
+ * @version 1.0
+ * @author jinhaoxun
+ * @date 2018-05-09
+ * @description Shiro配置
  */
 @Slf4j
 public class RestPathMatchingFilterChainResolver extends PathMatchingFilterChainResolver {
