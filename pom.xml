@@ -32,6 +32,7 @@
         <module>knife4j-demo</module>
         <module>threadpool-demo</module>
         <module>easyexcel-demo</module>
+        <module>elasticsearch-demo</module>
     </modules>
 
 
