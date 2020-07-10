@@ -8,11 +8,11 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.jinhaoxun</groupId>
+    <groupId>com.luoyu</groupId>
     <artifactId>elasticsearch-demo</artifactId>
     <version>1.0.0</version>
     <name>elasticsearch-demo</name>
-    <description>ElasticSearch Demo</description>
+    <description>Elasticsearch Demo</description>
 
     <properties>
         <java.version>1.8</java.version>

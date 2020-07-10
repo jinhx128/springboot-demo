@@ -8,7 +8,7 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.jinhaoxun</groupId>
+    <groupId>com.luoyu</groupId>
     <artifactId>knife4j-demo</artifactId>
     <version>1.0.0</version>
     <name>knife4j-demo</name>
