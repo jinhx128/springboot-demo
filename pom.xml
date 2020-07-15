@@ -19,6 +19,7 @@
     <modules>
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
+        <module>exception-demo</module>
         <module>filetransmission-demo</module>
         <module>shiro-demo</module>
         <module>redis-demo</module>
@@ -31,9 +32,9 @@
         <module>swagger-demo</module>
         <module>knife4j-demo</module>
         <module>threadpool-demo</module>
-        <module>easyexcel-demo</module>
         <module>elasticsearch-demo</module>
         <module>kafka-demo</module>
+        <module>aop-demo</module>
     </modules>
 
 

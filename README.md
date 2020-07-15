@@ -14,6 +14,8 @@
 |08|[springboot 2.2.5 整合Swagger 2.9.2，实现扫描多个不同包的接口，并配置支持传参token进行验证](https://www.jianshu.com/p/7386a0e04ca8)|
 |09|[springboot 2.2.5 整合Thymeleaf模版引擎，并实现简单的页面操作](https://www.jianshu.com/p/334e8ce0758e)|
 |10|[springboot项目配置logback打印日志，并自定义日志级别打印mybatisplus的sql语句，附带lombok工具打印方法](https://www.jianshu.com/p/a7f1a33b9825)|
+|11|[springboot 2.2.5 整合kafka，以最简单的方式操作KafkaTemplate](https://www.jianshu.com/p/08290d6cbf66)|
+|12|[springboot 2.2.5 整合elasticsearch，附带各种api的简单调用方式](https://www.jianshu.com/p/19a820138a47)|
 
 ## 关于作者
 【<b>个人博客</b>】    【<b><a href="https://luoyublog.com"> https://luoyublog.com </a></b>】<br/>
