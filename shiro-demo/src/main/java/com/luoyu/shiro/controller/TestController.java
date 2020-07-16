@@ -15,6 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/getlist")
+    public String sigin(){
+        return null;
+    }
+
+    @GetMapping("/getlist")
+    public String index(){
+        return null;
+    }
+
+    @GetMapping("/getlist")
+    public String index(){
+        return null;
+    }
+
+    @GetMapping("/getlist")
     public String index(){
         return null;
     }

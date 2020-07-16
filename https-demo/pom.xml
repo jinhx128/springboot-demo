@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.luoyu</groupId>
-    <artifactId>shiro-demo</artifactId>
+    <artifactId>https-demo</artifactId>
     <version>1.0.0</version>
-    <name>shiro-demo</name>
-    <description>Shiro Demo</description>
+    <name>https-demo</name>
+    <description>Https Demo</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -39,24 +39,6 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <!-- faction-阿里巴巴JSON处理器 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
-        </dependency>
-        <!-- Json Web Token -->
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <!-- 整合Shiro -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>1.4.0</version>
         </dependency>
     </dependencies>
 

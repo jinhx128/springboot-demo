@@ -1,4 +1,4 @@
-package com.luoyu.shiro.util;
+package com.luoyu.shiro.jwt.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

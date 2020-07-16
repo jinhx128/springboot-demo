@@ -67,12 +67,10 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/user/user--POST", "anon");
 
         filterChainDefinitionMap.put("/article/**--GET", "anon");
-        filterChainDefinitionMap.put("/rabbitmq/**", "anon");
-        filterChainDefinitionMap.put("/rocketmq/**", "anon");
         filterChainDefinitionMap.put("/test/**", "anon");
 
         // 其余所有请求通过自定义的Filter
-        //filterChainDefinitionMap.put("/**", "customshirofilter");
+        filterChainDefinitionMap.put("/**", "customshirofilter");
         // 访问 /unauthorized/** 不通过JWTFilter
         //filterRuleMap.put("/401", "anon");
         factoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);

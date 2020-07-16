@@ -2,7 +2,7 @@ package com.luoyu.shiro.cache;
 
 import com.alibaba.fastjson.JSONObject;
 import com.luoyu.shiro.common.AbstractConstant;
-import com.luoyu.shiro.util.JwtUtil;
+import com.luoyu.shiro.jwt.util.JwtUtil;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
