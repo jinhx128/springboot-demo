@@ -35,6 +35,9 @@
         <module>elasticsearch-demo</module>
         <module>kafka-demo</module>
         <module>aop-demo</module>
+        <module>https-demo</module>
+        <module>docker-demo</module>
+        <module>websocket-demo</module>
     </modules>
 
 </project>

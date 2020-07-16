@@ -1,1 +1,20 @@
+# http服务端口
+custom:
+  server:
+    http:
+      port: 8085
 
+# 开启https支持
+server:
+  http2:
+    enabled: true
+  port: 8443 # https服务端口
+  servlet:
+    context-path: /api # 接口统一前缀
+  ssl: # 指定ssl证书
+    key-store: classpath:javalsj.jks
+    key-store-password: tuc0KI70
+  undertow: # 配置 undertow 服务器
+    buffer-size: 512
+    io-threads: 2
+    worker-threads: 20
