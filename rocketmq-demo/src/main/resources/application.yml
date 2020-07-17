@@ -6,3 +6,6 @@ rocketmq:
     group: dubbo-demo-service-manager-producer-group-1 #生产者
   consumer:
     group: dubbo-demo-service-manager-consumer-group-1 #消费者
+
+server:
+  port: 8096

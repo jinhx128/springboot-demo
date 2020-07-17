@@ -4,3 +4,6 @@ logging:
 # 打印日志统一根路径
 log:
   file: D:/log
+
+server:
+  port: 8091

@@ -13,16 +13,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Description:
+ * @Description: 采用 Undertow 作为服务器,支持 Https 服务配置
  * @Author: jinhaoxun
  * @Date: 2020/7/16 10:39 下午
  * @Version: 1.0.0
- */
-/**
- * @version 1.0
- * @author jinhaoxun
- * @date 2018-05-09
- * @description 采用 Undertow 作为服务器,支持 Https 服务配置
  */
 @Configuration
 public class WebServerConfig {

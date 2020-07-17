@@ -58,7 +58,7 @@
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
                     <to>
-                        <image>registry.hub.docker.com/images_luoyu_prod/${project.name}</image>
+                        <image>luoyusoft/${project.name}</image>
                         <tags>
                             <tag>${project.version}</tag>
                         </tags>

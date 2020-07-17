@@ -11,6 +11,6 @@ spring:
     suffix: .html # 构建URL时附加查看名称的后缀.
 
 server:
-  port: 8082
+  port: 8181
   servlet:
     context-path: /templates # 在构建URL时的前缀

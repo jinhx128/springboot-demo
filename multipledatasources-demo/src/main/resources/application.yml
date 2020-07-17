@@ -42,3 +42,6 @@ spring:
       ## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
       auto-commit: true
       connection-test-query: SELECT 1
+
+server:
+  port: 8092

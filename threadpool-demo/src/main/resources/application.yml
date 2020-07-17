@@ -6,3 +6,6 @@ threadPoolTaskExecutor:
   queueCapacity: 200 # 缓冲队列数
   threadNamePrefix1: Custom-Executor-1- # 线程名统一前缀
   threadNamePrefix2: Custom-Executor-2- # 线程名统一前缀
+
+server:
+  port: 8099

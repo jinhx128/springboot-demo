@@ -2,7 +2,7 @@
 custom:
   server:
     http:
-      port: 8085
+      port: 8087
 
 # 开启https支持
 server:
