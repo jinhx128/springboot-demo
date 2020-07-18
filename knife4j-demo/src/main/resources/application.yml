@@ -1,6 +1,10 @@
 server:
   port: 8089
 
+spring:
+  application:
+    name: knife4j-demo-server
+
 knife4j:
   production: false
   basic:

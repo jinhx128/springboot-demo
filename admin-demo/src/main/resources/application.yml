@@ -1,0 +1,6 @@
+server:
+  port: 8184
+
+spring:
+  application:
+    name: admin-demo-server

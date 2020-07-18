@@ -1,2 +1,6 @@
 server:
   port: 8094
+
+spring:
+  application:
+    name: quartz-demo-server

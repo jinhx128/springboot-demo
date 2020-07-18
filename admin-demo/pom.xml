@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.luoyu</groupId>
-    <artifactId>shiro-demo</artifactId>
+    <artifactId>admin-demo</artifactId>
     <version>1.0.0</version>
-    <name>shiro-demo</name>
-    <description>Shiro Demo</description>
+    <name>admin-demo</name>
+    <description>Admin Demo</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -40,27 +40,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- faction-阿里巴巴JSON处理器 -->
+
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
-        </dependency>
-        <!-- Json Web Token -->
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <!-- 整合Shiro -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.2.2</version>
         </dependency>
     </dependencies>
 

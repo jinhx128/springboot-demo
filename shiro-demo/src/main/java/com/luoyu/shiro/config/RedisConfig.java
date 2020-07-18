@@ -1,4 +1,4 @@
-package com.luoyu.shiro.redis.config;
+package com.luoyu.shiro.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

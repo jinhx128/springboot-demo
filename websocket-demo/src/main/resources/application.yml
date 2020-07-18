@@ -1,2 +1,6 @@
 server:
   port: 8183
+
+spring:
+  application:
+    name: websocket-demo-server

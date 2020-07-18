@@ -1,2 +1,6 @@
 server:
   port: 8182
+
+spring:
+  application:
+    name: webmagic-demo-server

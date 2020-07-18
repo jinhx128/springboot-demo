@@ -21,8 +21,8 @@ public class TestController {
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
-    /**聊天室（单聊+多聊）
-     *
+    /**
+     * 单聊
      * @CrossOrigin 跨域
      *
      * @MessageMapping 注解的方法可以使用下列参数:

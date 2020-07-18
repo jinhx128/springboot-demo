@@ -9,3 +9,7 @@ threadPoolTaskExecutor:
 
 server:
   port: 8099
+
+spring:
+  application:
+    name: threadpool-demo-server

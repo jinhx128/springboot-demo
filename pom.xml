@@ -39,6 +39,7 @@
         <module>docker-demo</module>
         <module>websocket-demo</module>
         <module>actuator-demo</module>
+        <module>admin-demo</module>
     </modules>
 
 </project>

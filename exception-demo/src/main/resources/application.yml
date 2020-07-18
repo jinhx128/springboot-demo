@@ -1,2 +1,6 @@
 server:
   port: 8085
+
+spring:
+  application:
+    name: exception-demo-server

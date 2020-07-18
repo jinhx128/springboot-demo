@@ -9,3 +9,7 @@ rocketmq:
 
 server:
   port: 8096
+
+spring:
+  application:
+    name: rocketmq-demo-server

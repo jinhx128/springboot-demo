@@ -1,2 +1,6 @@
 server:
   port: 8098
+
+spring:
+  application:
+    name: swagger-demo-server

@@ -9,6 +9,8 @@ spring:
     servlet:
       content-type: text/html # Content-Type值
     suffix: .html # 构建URL时附加查看名称的后缀.
+  application:
+    name: thymeleaf-demo-server
 
 server:
   port: 8181

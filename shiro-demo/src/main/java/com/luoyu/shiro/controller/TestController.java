@@ -14,23 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @GetMapping("/getlist")
-    public String sigin(){
+    @GetMapping("/login")
+    public String login(){
         return null;
     }
 
-    @GetMapping("/getlist")
-    public String index(){
-        return null;
-    }
-
-    @GetMapping("/getlist")
-    public String index(){
-        return null;
-    }
-
-    @GetMapping("/getlist")
-    public String index(){
+    @GetMapping("/logout")
+    public String logout(){
         return null;
     }
 

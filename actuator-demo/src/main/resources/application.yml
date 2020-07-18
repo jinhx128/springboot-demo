@@ -1,0 +1,24 @@
+server:
+  port: 8185
+
+spring:
+  application:
+    name: actuator-demo-server
+  boot:
+    admin:
+      client:
+        url: http://localhost:8184
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /monitor
+  server:
+    port: 8186

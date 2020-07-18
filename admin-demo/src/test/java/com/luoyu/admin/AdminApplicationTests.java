@@ -1,10 +1,10 @@
-package com.luoyu.actuator;
+package com.luoyu.admin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ActuatorDemoApplicationTests {
+class AdminApplicationTests {
 
     @Test
     void contextLoads() {

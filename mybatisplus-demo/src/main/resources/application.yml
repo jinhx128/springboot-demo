@@ -48,6 +48,8 @@ spring:
             idle-timeout: 180000
             ## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
             auto-commit: true
+  application:
+    name: mybatisplus-demo-server
 
 # mybatis-plus相关配置
 mybatis-plus:

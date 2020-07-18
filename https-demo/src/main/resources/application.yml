@@ -4,6 +4,10 @@ custom:
     http:
       port: 8087
 
+spring:
+  application:
+    name: https-demo-server
+
 # 开启https支持
 server:
   http2:
