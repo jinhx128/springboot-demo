@@ -38,6 +38,7 @@
         <module>https-demo</module>
         <module>docker-demo</module>
         <module>websocket-demo</module>
+        <module>actuator-demo</module>
     </modules>
 
 </project>
