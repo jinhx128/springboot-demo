@@ -4,8 +4,8 @@ threadPoolTaskExecutor:
   maxPoolSize: 100 # 最大线程数
   keepAliveTime: 10 # 允许线程空闲时间（单位：默认为秒）
   queueCapacity: 200 # 缓冲队列数
-  threadNamePrefix1: Custom-Executor-1- # 线程名统一前缀
-  threadNamePrefix2: Custom-Executor-2- # 线程名统一前缀
+  threadNamePrefix1: custom-executor-1- # 线程名统一前缀
+  threadNamePrefix2: custom-executor-2- # 线程名统一前缀
 
 server:
   port: 8099

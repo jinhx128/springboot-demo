@@ -23,9 +23,7 @@ class ThreadpoolDemoApplicationTests {
     @Async
     @Test
     void test1(){
-        testTaskExecutor1.execute(() -> {
-            log.info("看看是哪个线程执行了我！");
-        });
+        log.info("看看是哪个线程执行了我！");
     }
 
     @Test
@@ -38,9 +36,7 @@ class ThreadpoolDemoApplicationTests {
     @Async
     @Test
     void test3(){
-        testTaskExecutor2.execute(() -> {
-            log.info("看看是哪个线程执行了我！");
-        });
+        log.info("看看是哪个线程执行了我！");
     }
 
     @Test
