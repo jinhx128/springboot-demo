@@ -72,11 +72,11 @@ class ElasticsearchApplicationTests {
         // 新增文档
         User user = new User();
         user.setAge(12);
-        user.setName("落雨");
+        user.setName("ff落333雨33");
 
         IndexRequest indexRequest = new IndexRequest("test_index");
         // 设置超时时间
-        indexRequest.id("1");
+        indexRequest.id("4");
         indexRequest.timeout(TimeValue.timeValueSeconds(1));
         // 转换为json字符串
         indexRequest.source(JSON.toJSONString(user), XContentType.JSON);
