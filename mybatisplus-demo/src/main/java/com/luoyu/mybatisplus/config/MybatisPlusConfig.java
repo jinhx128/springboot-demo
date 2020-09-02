@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @Configuration
 public class MybatisPlusConfig {
+
     /**
      * mybatis-plus SQL执行效率插件【生产环境可以关闭】，设置 dev test 环境开启
      */

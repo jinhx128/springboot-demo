@@ -41,6 +41,7 @@
         <module>actuator-demo</module>
         <module>admin-demo</module>
         <module>rabbitmq-demo</module>
+        <module>xxljob-demo</module>
     </modules>
 
 </project>
