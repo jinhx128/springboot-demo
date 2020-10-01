@@ -1,0 +1,9 @@
+spring:
+  jackieonway:
+    sms:
+      sms-type: ali  # 短信服务商，默认为ali
+      access-key:  # 阿里云短信服务的公钥
+      security-key:  # 阿里云短信服务的私钥
+      domain: dysmsapi.aliyuncs.com # 阿里云 域名
+      region: cn-hangzhou # 阿里云短信服务的区域id
+      version: 2017-05-25

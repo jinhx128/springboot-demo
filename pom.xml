@@ -42,6 +42,7 @@
         <module>admin-demo</module>
         <module>rabbitmq-demo</module>
         <module>xxljob-demo</module>
+        <module>mail-demo</module>
     </modules>
 
 </project>

@@ -1,0 +1,15 @@
+spring:
+  mail:
+    host: smtp.126.com
+    port:
+    username: luoyusoft@126.com
+    password: ZGHKSEWBQSMUNGBS
+    protocol: smtp
+    default-encoding: utf-8
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.starttls.enable: true
+#      mail.smtp.starttls.required: true
+#      mail.smtp.socketFactory.port: 465
+#      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+#      mail.smtp.socketFactory.fallback: false
