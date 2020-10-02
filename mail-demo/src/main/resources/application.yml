@@ -3,7 +3,7 @@ spring:
     host: smtp.126.com
     port:
     username: luoyusoft@126.com
-    password: ZGHKSEWBQSMUNGBS
+    password:
     protocol: smtp
     default-encoding: utf-8
 #    properties:

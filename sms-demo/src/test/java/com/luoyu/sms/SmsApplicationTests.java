@@ -1,7 +1,6 @@
 package com.luoyu.sms;
 
-import com.github.jackieonway.sms.entity.TencentSmsRequest;
-import com.github.jackieonway.sms.service.SmsService;
+import com.luoyu.sms.service.AliYunSmsService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,17 +14,27 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SmsApplicationTests {
 
 	@Autowired
-	private SmsService smsService;
+	private AliYunSmsService aliYunSmsService;
 
-	@Test
-	void test() {
-		// 具体配置请参照具体运营商
-		// your template params
-		String[] paramst = {"5678"};
-		TencentSmsRequest tencentSmsRequest = new TencentSmsRequest();
-		tencentSmsRequest.setPhoneNumber(new String[]{"13570368797"});
-		tencentSmsRequest.setParams(paramst);
-		smsService.sendTemplateSms("SMS_180347872", tencentSmsRequest);
+//	@Autowired
+//	private SmsService smsService;
+
+//	@Test
+//	void test() {
+//		// 具体配置请参照具体运营商
+//		// your template params
+//		String[] paramst = {"5678"};
+//		TencentSmsRequest tencentSmsRequest = new TencentSmsRequest();
+//		tencentSmsRequest.setPhoneNumber(new String[]{"13570368797"});
+//		tencentSmsRequest.setParams(paramst);
+//		smsService.sendTemplateSms("SMS_180347872", tencentSmsRequest);
+//	}
+
+ 	@Test
+	void aliYunSendSmsTest() {
+ 		String phone = "13570368797";
+ 		String code = "10086";
+ 		aliYunSmsService.sendSms(phone, code);
 	}
 
 	@BeforeEach

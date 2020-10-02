@@ -1,10 +1,9 @@
 package com.luoyu.sms;
 
-import com.github.jackieonway.sms.annotion.EnabledSmsAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnabledSmsAutoConfiguration
+//@EnabledSmsAutoConfiguration
 @SpringBootApplication
 public class SmsApplication {
 

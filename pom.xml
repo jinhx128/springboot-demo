@@ -43,6 +43,7 @@
         <module>rabbitmq-demo</module>
         <module>xxljob-demo</module>
         <module>mail-demo</module>
+        <module>sms-demo</module>
     </modules>
 
 </project>
