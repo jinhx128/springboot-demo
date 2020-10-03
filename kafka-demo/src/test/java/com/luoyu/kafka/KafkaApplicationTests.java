@@ -1,13 +1,12 @@
 package com.luoyu.kafka;
 
 import com.luoyu.kafka.message.Message;
+import com.luoyu.kafka.service.KafkaService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.kafka.core.KafkaTemplate;
 
 import javax.annotation.Resource;
 
@@ -17,7 +16,7 @@ import javax.annotation.Resource;
 class KafkaApplicationTests {
 
     @Resource
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaService kafkaService;
 
     @Test
     void testSendMessage() throws Exception{
@@ -25,7 +24,7 @@ class KafkaApplicationTests {
         message.setId("1");
         message.setContent("test");
         // 发送消息
-        kafkaTemplate.send("test_topic", message.toString());
+        kafkaService.sendMessage(message.toString());
         // 让主线程睡眠10秒
         Thread.currentThread().sleep(10000);
     }

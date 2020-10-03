@@ -1,7 +1,6 @@
 package com.luoyu.quartz.request;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @Description: 删除定时任务请求实体类
@@ -9,8 +8,7 @@ import lombok.Setter;
  * @Date: 2020/1/15 11:20
  * @Version: 1.0.0
  */
-@Setter
-@Getter
+@Data
 public class DeleteJobReq {
 
     private String jobName;

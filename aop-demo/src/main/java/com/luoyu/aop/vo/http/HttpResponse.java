@@ -1,8 +1,7 @@
 package com.luoyu.aop.vo.http;
 
 import com.luoyu.aop.vo.base.Model;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -12,8 +11,7 @@ import java.time.ZoneOffset;
  * @author jinhaoxun
  * @date 2019年12月29日 下午8:15:39
  */
-@Setter
-@Getter
+@Data
 public class HttpResponse<T> extends Model {
 	/**
 	 * 响应码

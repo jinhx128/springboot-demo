@@ -18,17 +18,17 @@ class MailApplicationTests {
 
 	@Test
 	void sendSimpleMailTest() {
-		mailService.sendSimpleMail("956534763@qq.com", "jhx测试邮件主题", "jhx测试邮件内容");
+		mailService.sendSimpleMail("xxx", "jhx测试邮件主题", "jhx测试邮件内容");
 	}
 
 	@Test
 	void sendMimeMailTest1() throws Exception {
-		mailService.sendMimeMail("956534763@qq.com", "jhx测试邮件主题", "jhx测试邮件内容", "/Users/luoyu/Downloads/赤瞳.jpg");
+		mailService.sendMimeMail("xxx", "jhx测试邮件主题", "jhx测试邮件内容", "/Users/luoyu/Downloads/赤瞳.jpg");
 	}
 
 	@Test
 	void sendMimeMailTest2() throws Exception {
-		mailService.sendMimeMail("956534763@qq.com", "jhx测试邮件主题");
+		mailService.sendMimeMail("xxx", "jhx测试邮件主题");
 	}
 
 	@BeforeEach

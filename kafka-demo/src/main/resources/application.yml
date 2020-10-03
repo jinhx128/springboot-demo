@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: 172.16.31.191:9092,172.16.31.192:9092,172.16.31.193:9092
+    bootstrap-servers: xxx:9092,xxx:9092,xxx:9092
     # 消费监听接口监听的主题不存在时，默认会报错
     listener:
       missing-topics-fatal: false

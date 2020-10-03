@@ -1,7 +1,6 @@
 package com.luoyu.websocket.vo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @Description:
@@ -9,8 +8,7 @@ import lombok.Setter;
  * @Date: 2020/7/16 10:39 下午
  * @Version: 1.0.0
  */
-@Setter
-@Getter
+@Data
 public class RequestMessage {
 
     private String sender;//消息发送者

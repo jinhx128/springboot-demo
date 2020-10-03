@@ -1,4 +1,4 @@
-package com.luoyu.xxljob.job;
+package com.luoyu.xxljob.service;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;

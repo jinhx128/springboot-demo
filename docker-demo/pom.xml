@@ -58,13 +58,13 @@
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
                     <to>
-                        <image>luoyusoft/${project.name}</image>
+                        <image>xxx/${project.name}</image>
                         <tags>
                             <tag>${project.version}</tag>
                         </tags>
                         <auth>
-                            <username>luoyusoft</username>
-                            <password>Ajinhaoxun668797</password>
+                            <username>xxx</username>
+                            <password>xxx</password>
                         </auth>
                     </to>
                     <container>

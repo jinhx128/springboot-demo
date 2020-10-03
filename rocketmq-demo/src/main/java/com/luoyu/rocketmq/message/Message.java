@@ -1,7 +1,6 @@
 package com.luoyu.rocketmq.message;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -11,8 +10,7 @@ import java.io.Serializable;
  * @Date: 2020/2/11 上午9:52
  * @Version: 1.0.0
  */
-@Getter
-@Setter
+@Data
 public class Message<T> implements Serializable {
     private String id;
     private T content;

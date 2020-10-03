@@ -1,7 +1,6 @@
 package com.luoyu.quartz.request;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,8 +11,7 @@ import java.util.Map;
  * @Date: 2020/1/15 11:20
  * @Version: 1.0.0
  */
-@Setter
-@Getter
+@Data
 public class AddCronJobReq {
 
     private String jobName;

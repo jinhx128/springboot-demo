@@ -2,8 +2,7 @@ package com.luoyu.easyexcel.request;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @Description: 生成excel文件数据字段模板
@@ -11,8 +10,7 @@ import lombok.Setter;
  * @Date: 2020/1/14 15:45
  * @Version: 1.0.0
  */
-@Getter
-@Setter
+@Data
 public class ExcelModel1 extends BaseRowModel {
 
     public ExcelModel1(){

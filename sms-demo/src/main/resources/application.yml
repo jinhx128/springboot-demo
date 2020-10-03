@@ -1,3 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: sms-demo-server
+
 #spring:
 #  jackieonway:
 #    sms:
@@ -10,9 +17,9 @@
 
 sms:
   aliyun:
-    accessKeyID:  # 你的accessKeyID
-    accessKeySecret:  # 你的accessKeySecret
+    accessKeyID:  xxx # 你的accessKeyID
+    accessKeySecret:  xxx # 你的accessKeySecret
     domain: dysmsapi.aliyuncs.com # 固定不变
     regionId: cn-hangzhou # 固定不变
-    templateCode: # 你的模板code
-    signName: # 你的签名
+    templateCode: xxx # 你的模板code
+    signName: xxx # 你的签名

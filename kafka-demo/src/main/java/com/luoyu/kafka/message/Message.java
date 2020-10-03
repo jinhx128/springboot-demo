@@ -1,7 +1,6 @@
 package com.luoyu.kafka.message;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -11,9 +10,10 @@ import java.io.Serializable;
  * @Date: 2020/7/10 9:53 上午
  * @Version: 1.0.0
  */
-@Getter
-@Setter
+@Data
 public class Message<T> implements Serializable {
+
     private String id;
     private T content;
+
 }

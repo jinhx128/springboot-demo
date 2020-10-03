@@ -1,7 +1,6 @@
 # 配置rocketmq
 rocketmq:
-  # name-server: 47.101.135.160:9876;xxx
-  name-server: 172.16.31.171:9876;172.16.31.172:9876
+  name-server: xxx:9876;xxx:9876
   producer:
     group: dubbo-demo-service-manager-producer-group-1 #生产者
   consumer:

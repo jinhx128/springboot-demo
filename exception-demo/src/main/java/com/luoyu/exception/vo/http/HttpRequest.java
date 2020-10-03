@@ -1,8 +1,7 @@
 package com.luoyu.exception.vo.http;
 
 import com.luoyu.exception.vo.base.Model;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.validation.Valid;
 
@@ -11,8 +10,7 @@ import javax.validation.Valid;
 * @author jinhaoxun
 * @date 2019年12月29日 下午8:16:52
  */
-@Setter
-@Getter
+@Data
 public class HttpRequest<T> extends Model {
 	/**
 	 * 客户端的版本

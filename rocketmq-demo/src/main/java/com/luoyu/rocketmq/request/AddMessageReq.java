@@ -1,8 +1,7 @@
 package com.luoyu.rocketmq.request;
 
 import com.luoyu.rocketmq.message.Message;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * @version 1.0
@@ -10,8 +9,7 @@ import lombok.Setter;
  * @date 2018-05-09
  * @description 发送RocketMQ消息请求实体类
  */
-@Setter
-@Getter
+@Data
 public class AddMessageReq {
 
     private String topic;

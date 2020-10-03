@@ -25,14 +25,14 @@ class SmsApplicationTests {
 //		// your template params
 //		String[] paramst = {"5678"};
 //		TencentSmsRequest tencentSmsRequest = new TencentSmsRequest();
-//		tencentSmsRequest.setPhoneNumber(new String[]{"13570368797"});
+//		tencentSmsRequest.setPhoneNumber(new String[]{"xxx"});
 //		tencentSmsRequest.setParams(paramst);
 //		smsService.sendTemplateSms("SMS_180347872", tencentSmsRequest);
 //	}
 
  	@Test
 	void aliYunSendSmsTest() {
- 		String phone = "13570368797";
+ 		String phone = "xxx";
  		String code = "10086";
  		aliYunSmsService.sendSms(phone, code);
 	}

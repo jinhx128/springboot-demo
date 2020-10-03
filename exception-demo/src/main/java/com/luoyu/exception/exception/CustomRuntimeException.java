@@ -1,8 +1,6 @@
 package com.luoyu.exception.exception;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -12,9 +10,7 @@ import java.io.Serializable;
  * @date 2019-08-09
  * @description 自定义运行时异常（相当于系统异常）
  */
-@Setter
-@Getter
-@ToString
+@Data
 public class CustomRuntimeException extends RuntimeException implements Serializable {
 
     private static final long serialVersionUID = 1L;
