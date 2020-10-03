@@ -1,25 +1,22 @@
 package com.luoyu.rocketmq;
 
-import com.luoyu.rocketmq.message.Message;
-import com.luoyu.rocketmq.request.AddMessageReq;
+import com.luoyu.rocketmq.entity.Message;
+import com.luoyu.rocketmq.entity.request.AddMessageReq;
+import com.luoyu.rocketmq.service.RocketMQService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.rocketmq.client.producer.SendCallback;
-import org.apache.rocketmq.client.producer.SendResult;
-import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.annotation.Resource;
 
 @Slf4j
 // 获取启动类，加载配置，确定装载 Spring 程序的装载方法，它回去寻找 主配置启动类（被 @SpringBootApplication 注解的）
 @SpringBootTest
 class RocketmqApplicationTests {
 
-    @Resource
-    private RocketMQTemplate rocketMQTemplate;
+    @Autowired
+    private RocketMQService rocketMQService;
 
     @Test
     void syncSendMessageTest() throws InterruptedException {
@@ -27,16 +24,11 @@ class RocketmqApplicationTests {
         Message<String> message = new Message<>();
         message.setId("123");
         message.setContent("测试一下");
-        rocketMQTemplate.asyncSend("topic2", message, new SendCallback() {
-                    // 实现消息发送成功的后续处理
-                    public void onSuccess(SendResult var1) {
-                        System.out.printf("async onSucess SendResult=%s %n", var1);
-                    }
-                    // 实现消息发送失败的后续处理
-                    public void onException(Throwable var1) {
-                        System.out.printf("async onException Throwable=%s %n", var1);
-                    }
-                });
+
+        AddMessageReq addMessageReq = new AddMessageReq();
+        addMessageReq.setTopic("topic2");
+        addMessageReq.setMessage(message);
+        rocketMQService.syncSendMessage(addMessageReq);
         // 让主线程睡眠10秒
         Thread.currentThread().sleep(10000);
     }
@@ -47,11 +39,13 @@ class RocketmqApplicationTests {
         AddMessageReq addMessageReq = new AddMessageReq();
         addMessageReq.setTopic("topic1");
         addMessageReq.setTag("tag1");
+
         Message<String> message = new Message<>();
         message.setId("123");
         message.setContent("测试一下");
         addMessageReq.setMessage(message);
-        rocketMQTemplate.convertAndSend(addMessageReq.getTopic() + ":" + addMessageReq.getTag(), addMessageReq.getMessage());
+
+        rocketMQService.sendMessage(addMessageReq);
         // 让主线程睡眠10秒
         Thread.currentThread().sleep(10000);
     }

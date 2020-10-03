@@ -1,24 +1,21 @@
 server:
   port: 8185
+  shutdown: graceful # 在web容器关闭时，web服务器将不再接收新请求，并将等待活动请求完成的缓冲期。
 
 spring:
   application:
     name: actuator-demo-server
-  boot:
-    admin:
-      client:
-        url: http://localhost:8184
+  lifecycle:
+    timeout-per-shutdown-phase: 20s # 默认时间为30S, 意味着最大等待30S，超时候无论线程任务是否执行完毕都会停机处理，一定要合理合理设置。
 
 management:
   endpoint:
-    shutdown:
-      enabled: true
     health:
-      show-details: ALWAYS
+      show-details: always # 显示健康详情
+    shutdown:
+      enabled: true # 开启shutdown端点访问
   endpoints:
     web:
+      base-path: /actuator # 访问根路径
       exposure:
-        include: "*"
-      base-path: /monitor
-  server:
-    port: 8186
+        include: "*" # 开启除了shutdown以外的所有端点访问

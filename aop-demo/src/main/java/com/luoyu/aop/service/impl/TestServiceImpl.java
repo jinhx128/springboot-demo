@@ -1,13 +1,13 @@
 package com.luoyu.aop.service.impl;
 
 import com.luoyu.aop.service.TestService;
-import com.luoyu.aop.vo.request.TestRequest;
-import com.luoyu.aop.vo.response.TestResponse;
+import com.luoyu.aop.entity.request.TestRequest;
+import com.luoyu.aop.entity.response.TestResponse;
 import org.springframework.stereotype.Service;
 
 /**
  * @Description:
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/7/10 10:32 上午
  * @Version: 1.0.0
  */

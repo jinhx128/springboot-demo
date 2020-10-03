@@ -1,30 +1,28 @@
 package com.luoyu.aop.aop;
 
-import com.alibaba.fastjson.JSON;
-import com.luoyu.aop.util.EncodeUtil;
-import com.luoyu.aop.util.StringUtil;
-import com.luoyu.aop.vo.http.HttpRequest;
-import com.luoyu.aop.vo.http.HttpResponse;
-import com.luoyu.aop.vo.response.TestResponse;
-import com.sun.tools.javac.util.ArrayUtils;
+import com.luoyu.aop.config.KeyConfig;
+import com.luoyu.aop.entity.http.HttpRequest;
+import com.luoyu.aop.entity.http.HttpResponse;
+import com.luoyu.aop.entity.response.TestResponse;
+import com.luoyu.aop.util.AESUtil;
+import com.luoyu.aop.util.JsonUtils;
+import com.oracle.tools.packager.Log;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 /**
- * @Auther: jinhaoxun
+ * @Auther: luoyu
  * @Date: 2019/1/22 16:28
  * @Description:
  */
@@ -32,14 +30,8 @@ import java.lang.reflect.Method;
 @Component
 public class HttpCheckAspact {
 
-    /**
-     * 加密请求的默认key
-     */
-    private static String REQUEST_KEY = "w@sd8dlm";
-    /**
-     * 加密响应的默认key
-     */
-    private static String RESPONSE_KEY = "#ems&koq";
+    @Autowired
+    private KeyConfig keyConfig;
 
     @Pointcut("@annotation(com.luoyu.aop.aop.HttpCheck)")
     public void pointcut() {
@@ -56,10 +48,6 @@ public class HttpCheckAspact {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         HttpCheck annotation = method.getAnnotation(HttpCheck.class);
-        // 获取request对象
-        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
-        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)requestAttributes;
-        HttpServletRequest request = servletRequestAttributes.getRequest();
         // 获取HttpRequest对象
         Object[] args = joinPoint.getArgs();
         HttpRequest httpRequest = null;
@@ -69,17 +57,39 @@ public class HttpCheckAspact {
                     httpRequest = (HttpRequest)arg;
                 }
             }
+        }else {
+            throw new Exception("请求参数错误！");
         }
-        // 是否需要进行解密
-        boolean isDecrypt = annotation.isDecrypt();
-        // 解密的key
-        String dectyptKey = annotation.decryptKey();
-        Class<?> dataType = annotation.dataType();
-        // 获取需要解密的key
-        String key = StringUtil.isEmpty(dectyptKey) ? REQUEST_KEY: dectyptKey;
 
-        if(isDecrypt){
-            decryption(httpRequest, key, dataType);
+        // 是否需要检测超时时间
+        if (annotation.isTimeout()){
+            // 获取超时时间
+            String timeout = StringUtils.isEmpty(annotation.timeout()) ? keyConfig.getTimeout(): annotation.timeout();
+            if(LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli() < httpRequest.getTime()){
+                throw new Exception("请求时间错误！");
+            }
+            if(LocalDateTime.now().minusSeconds(Integer.parseInt(timeout)).toInstant(ZoneOffset.of("+8")).toEpochMilli() > httpRequest.getTime()){
+                throw new Exception("请求已超时！");
+            }
+            Log.info("检测超时时间成功！");
+        }
+
+        // 是否需要进行解密
+        if(annotation.isDecrypt()){
+            // 获取需要解密的key
+            String dectyptKey = StringUtils.isEmpty(annotation.decryptKey()) ? keyConfig.getKeyAesRequest(): annotation.decryptKey();
+
+            String sdt = httpRequest.getSdt();
+            if(StringUtils.isEmpty(sdt)){
+                throw new Exception("sdt不能为空！");
+            }
+            String context = AESUtil.decrypt(sdt, dectyptKey);
+            if(StringUtils.isEmpty(context)){
+                throw new Exception("sdt解密出错！");
+            }
+            Log.info("解密成功！");
+            // 设置解密后的data
+            httpRequest.setData(JsonUtils.jsonToObject(context, annotation.dataType()));
         }
 
     }
@@ -90,34 +100,17 @@ public class HttpCheckAspact {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         HttpCheck annotation = method.getAnnotation(HttpCheck.class);
-        String encrypyKey = annotation.encryptKey();
-        String key = StringUtil.isEmpty(encrypyKey)? RESPONSE_KEY : encrypyKey;
-        boolean isEncrypt = annotation.isEncrypt();
-        if(isEncrypt){
+        if(annotation.isEncrypt()){
             TestResponse body =  (TestResponse) httpResponse.getData();
+            // 进行响应加密
             if (body != null) {
-                  httpResponse.setSrs(EncodeUtil.encryptByAES(body.toString(), key));
-                  httpResponse.setData(null);
+                String encrypyKey = StringUtils.isEmpty(annotation.encryptKey())? keyConfig.getKeyAesResponse() : annotation.encryptKey();
+                // 设置加密后的srs
+                httpResponse.setSrs(AESUtil.encrypt(JsonUtils.objectToJson(body), encrypyKey));
+                Log.info("加密成功！");
+                httpResponse.setData(null);
             }
         }
     }
 
-    /**
-     * 解密
-     * @param httpRequest
-     * @param key
-     * @param dataType
-     * @throws Exception
-     */
-    private void decryption(HttpRequest httpRequest, String key, Class<?> dataType) throws  Exception{
-        String sdt = httpRequest.getSdt();
-        if(StringUtil.isEmpty(sdt)){
-            return;
-        }
-        String context = EncodeUtil.decryptByAES(sdt, key);
-        if(StringUtil.isEmpty(context)){
-            return;
-        }
-        httpRequest.setData(JSON.parseObject(context, dataType));
-    }
 }

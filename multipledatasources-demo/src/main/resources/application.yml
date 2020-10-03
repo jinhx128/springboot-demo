@@ -1,7 +1,7 @@
 spring:
   datasource:
     db1:
-      jdbc-url: jdbc:mysql://xxx/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
+      jdbc-url: jdbc:mysql://xxx:3306/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
       username: xxx
       password: xxx
       type: com.zaxxer.hikari.HikariDataSource
@@ -22,7 +22,7 @@ spring:
       auto-commit: true
       connection-test-query: SELECT 1
     db2:
-      jdbc-url: jdbc:mysql://xxx/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
+      jdbc-url: jdbc:mysql://xxx:3306/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
       username: xxx
       password: xxx
       type: com.zaxxer.hikari.HikariDataSource

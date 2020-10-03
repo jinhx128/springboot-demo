@@ -4,3 +4,12 @@ server:
 spring:
   application:
     name: aop-demo-server
+
+http:
+  check:
+    key:
+      aes:
+        request: w@sd8dlm # 解密请求体默认key
+        response: ems&koq3 # 加密响应体默认key
+    request:
+      timeout: 10 # 请求时间超时时间，单位秒

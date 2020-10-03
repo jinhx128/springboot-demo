@@ -1,0 +1,12 @@
+server:
+  port: 8184
+  servlet:
+    context-path: /monitor # 根路径
+
+spring:
+  application:
+    name: admin-server
+  security:
+    user:
+      name: root # 安全认证账号
+      password: root # 安全认证密码

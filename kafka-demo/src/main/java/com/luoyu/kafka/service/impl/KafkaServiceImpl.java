@@ -21,5 +21,4 @@ public class KafkaServiceImpl implements KafkaService {
         return true;
     }
 
-
 }

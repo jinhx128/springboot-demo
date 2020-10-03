@@ -1,12 +1,11 @@
 package com.luoyu.aop.service;
 
-import com.luoyu.aop.vo.http.HttpResponse;
-import com.luoyu.aop.vo.request.TestRequest;
-import com.luoyu.aop.vo.response.TestResponse;
+import com.luoyu.aop.entity.request.TestRequest;
+import com.luoyu.aop.entity.response.TestResponse;
 
 /**
  * @Description:
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/7/10 10:31 上午
  * @Version: 1.0.0
  */

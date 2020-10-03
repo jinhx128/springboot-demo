@@ -1,0 +1,25 @@
+server:
+  port: 8185
+
+spring:
+  application:
+    name: admin-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8184/monitor # admin server地址
+        username: root # admin server安全认证账号
+        password: root # admin server安全认证密码
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 打开actuator的监控
+
+# 额外显示信息
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"

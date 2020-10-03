@@ -6,7 +6,7 @@ spring:
       datasource:
         db1:
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://xxx/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
+          url: jdbc:mysql://xxx:3306/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
           username: xxx
           password: xxx
           # hikari
@@ -28,7 +28,7 @@ spring:
             auto-commit: true
         db2:
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://xxx/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
+          url: jdbc:mysql://xxx:3306/mybatisplus_demo?useUnicode=true&characterEncoding=utf-8
           username: xxx
           password: xxx
           # hikari

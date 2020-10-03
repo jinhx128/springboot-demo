@@ -1,8 +1,8 @@
 package com.luoyu.quartz.manager;
 
-import com.luoyu.quartz.request.AddCronJobReq;
-import com.luoyu.quartz.request.AddSimpleJobReq;
-import com.luoyu.quartz.request.DeleteJobReq;
+import com.luoyu.quartz.entity.request.AddCronJobReq;
+import com.luoyu.quartz.entity.request.AddSimpleJobReq;
+import com.luoyu.quartz.entity.request.DeleteJobReq;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.stereotype.Service;

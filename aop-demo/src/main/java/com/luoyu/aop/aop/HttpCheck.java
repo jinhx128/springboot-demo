@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  *
 * @Description: http请求的参数校验
-* @author jinhaoxun
+* @author luoyu
 * @date 2019年1月9日 下午6:53:41
  */
 @Target(ElementType.METHOD)
@@ -23,7 +23,7 @@ public @interface HttpCheck {
      * 才会检测该字段，并且传入为空时，
      * 用系统预先设置的key进行解密。
      */
-    String decryptKey() default "key";
+    String decryptKey() default "";
 
     /**
      * 解密，系统统一加密反序列化的类
@@ -40,6 +40,18 @@ public @interface HttpCheck {
      * 才会检测该字段，并且传入为空时，
      * 用系统预先设置的key进行加密返回
      */
-    String encryptKey() default "key";
+    String encryptKey() default "";
+
+    /**
+     * 是否需要检测超时时间(默认需要)
+     */
+    boolean isTimeout() default true;
+
+    /**
+     * 超时时间，只有当isTimeout=true
+     * 才会检测该字段，并且传入为空时，
+     * 用系统预先设置的timeout进行加密返回
+     */
+    String timeout() default "";
 
 }

@@ -6,7 +6,7 @@ spring:
     port: 6379
     timeout: 12000  # 连接超时时间（毫秒），默认2000ms
     # cluster:
-    # nodes: 192.168.211.134:7000,192.168.211.134:7001,192.168.211.134:7002
+    # nodes: xxx:7000,xxx:7001,xxx:7002
     # maxRedirects: 6
     jedis:
       pool:

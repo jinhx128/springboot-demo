@@ -2,9 +2,9 @@ package com.luoyu.easyexcel;
 
 import com.alibaba.excel.metadata.BaseRowModel;
 import com.alibaba.excel.support.ExcelTypeEnum;
-import com.luoyu.easyexcel.request.ExcelModel;
-import com.luoyu.easyexcel.request.ExcelModel1;
-import com.luoyu.easyexcel.request.ExcelModel2;
+import com.luoyu.easyexcel.entity.ExcelModel;
+import com.luoyu.easyexcel.entity.ExcelModel1;
+import com.luoyu.easyexcel.entity.ExcelModel2;
 import com.luoyu.easyexcel.util.DataConvertUtil;
 import com.luoyu.easyexcel.util.ExcelConvertCsvUtil;
 import com.luoyu.easyexcel.util.ExcelUtil;

@@ -64,8 +64,8 @@
     </logger>
 
 <!--    &lt;!&ndash; 设置包打印日志级别，例如把所有mapper文件的sql都出到控制台，还可以精确到某个类 &ndash;&gt;-->
-<!--    <logger name= "com.jinhaoxun.acdao.applymapper" level="TRACE" />-->
-<!--    <logger name= "com.jinhaoxun.acdao.shiromapper" level="TRACE" />-->
+<!--    <logger name= "com.luoyu.mapper.applymapper" level="TRACE" />-->
+<!--    <logger name= "com.luoyu.mapper.shiromapper" level="TRACE" />-->
 
     <root level="info">
         <appender-ref ref="ERROR"/>

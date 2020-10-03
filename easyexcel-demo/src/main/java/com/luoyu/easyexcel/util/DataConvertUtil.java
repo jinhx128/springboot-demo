@@ -42,4 +42,5 @@ public class DataConvertUtil {
     public static InputStream byte2ToInputStream(byte[] bytes) {
         return new ByteArrayInputStream(bytes);
     }
+
 }

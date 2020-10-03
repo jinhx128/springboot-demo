@@ -53,8 +53,8 @@ public class SwaggerConfig {
                 .groupName("1.0.0 版本")
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.luoyu.swagger.test1controller" + SPLITOR
-                        + "com.luoyu.swagger.test2controller" + SPLITOR ))
+                .apis(basePackage("com.luoyu.swagger.controller.test1" + SPLITOR
+                        + "com.luoyu.swagger.controller.test2" + SPLITOR ))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -78,7 +78,7 @@ public class SwaggerConfig {
                 .groupName("2.0.0 版本")
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.luoyu.swagger.test3controller" + SPLITOR ))
+                .apis(basePackage("com.luoyu.swagger.controller.test3" + SPLITOR ))
                 .paths(PathSelectors.any())
                 .build();
     }

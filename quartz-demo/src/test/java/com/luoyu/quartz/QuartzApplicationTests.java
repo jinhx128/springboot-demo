@@ -1,16 +1,16 @@
 package com.luoyu.quartz;
 
+import com.luoyu.quartz.entity.request.AddCronJobReq;
+import com.luoyu.quartz.entity.request.AddSimpleJobReq;
+import com.luoyu.quartz.entity.request.DeleteJobReq;
 import com.luoyu.quartz.manager.QuartzManager;
-import com.luoyu.quartz.request.AddCronJobReq;
-import com.luoyu.quartz.request.AddSimpleJobReq;
-import com.luoyu.quartz.request.DeleteJobReq;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.annotation.Resource;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import java.util.Map;
 @SpringBootTest
 class QuartzApplicationTests {
 
-    @Resource
+    @Autowired
     private QuartzManager quartzManager;
 
     @Test
