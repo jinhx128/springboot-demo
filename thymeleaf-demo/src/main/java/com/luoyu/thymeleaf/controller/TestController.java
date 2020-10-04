@@ -1,17 +1,18 @@
 package com.luoyu.thymeleaf.controller;
 
-import com.luoyu.thymeleaf.pojo.Test;
+import com.luoyu.thymeleaf.entity.Test;
+import com.luoyu.thymeleaf.service.iTestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * @Description:
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/4/11 下午8:17
  * @Version: 1.0.0
  */
@@ -19,8 +20,8 @@ import java.util.List;
 @RequestMapping("/test")
 public class TestController {
 
-    @Resource
-    private com.luoyu.thymeleaf.service.iTestService iTestService;
+    @Autowired
+    private iTestService iTestService;
 
     @GetMapping("/getlist")
     public ModelAndView index(){

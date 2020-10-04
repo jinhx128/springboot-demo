@@ -1,6 +1,6 @@
 package com.luoyu.thymeleaf.service.impl;
 
-import com.luoyu.thymeleaf.pojo.Test;
+import com.luoyu.thymeleaf.entity.Test;
 import com.luoyu.thymeleaf.service.iTestService;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import java.util.Random;
 
 /**
  * @Description:
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/4/12 下午1:27
  * @Version: 1.0.0
  */
@@ -18,7 +18,7 @@ import java.util.Random;
 public class TestServiceImpl implements iTestService {
 
     /**
-     * @Author: jinhaoxun
+     * @Author: luoyu
      * @Description: 随机返回一组数据用于展示
      * @Date: 2020/5/10 4:43 下午
      * @Return: java.util.List<com.jinhaoxun.thymeleaf.pojo.Test>

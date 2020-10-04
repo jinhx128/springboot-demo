@@ -5,13 +5,13 @@ spring:
   application:
     name: mail-demo-server
   mail:
-    host: smtp.126.com
-    port:
+    host: smtp.126.com # 不同的邮箱不一致，请自行百度查询
+    port: 25 # 126邮箱默认25
     username: xxx # 发送邮箱
-    password:
+    password: xxx # 授权码
     protocol: smtp
     default-encoding: utf-8
-#    properties:
+#    properties: # 此处可以添加ssl端口
 #      mail.smtp.auth: true
 #      mail.smtp.starttls.enable: true
 #      mail.smtp.starttls.required: true

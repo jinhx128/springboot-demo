@@ -6,8 +6,8 @@ spring:
     name: knife4j-demo-server
 
 knife4j:
-  production: false
+  production: false # 生产环境关闭文档访问
   basic:
-    enable: true
-    username: root
-    password: root
+    enable: true # 开启安全认证
+    username: root # 安全认证账号
+    password: root # 安全认证密码

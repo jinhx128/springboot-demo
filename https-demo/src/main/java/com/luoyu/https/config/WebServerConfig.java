@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Description: 采用 Undertow 作为服务器,支持 Https 服务配置
- * @Author: jinhaoxun
+ * @Description: 采用Undertow作为服务器，支持Https服务配置
+ * @Author: luoyu
  * @Date: 2020/7/16 10:39 下午
  * @Version: 1.0.0
  */
@@ -63,4 +63,5 @@ public class WebServerConfig {
         });
         return undertowFactory;
     }
+
 }

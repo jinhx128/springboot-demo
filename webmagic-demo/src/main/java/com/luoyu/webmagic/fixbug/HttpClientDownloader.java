@@ -25,7 +25,6 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * The http downloader based on HttpClient.
  *

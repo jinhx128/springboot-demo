@@ -26,7 +26,7 @@ import java.util.Optional;
 
 /**
  * @version 1.0
- * @author jinhaoxun
+ * @author luoyu
  * @date 2019-08-09
  * @description Knife4j配置
  */
@@ -42,7 +42,7 @@ public class Knife4jConfig {
     private static final String SPLITOR = ";";
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 配置token，以及设置扫描包的路径
      * @return Docket
      */
@@ -60,14 +60,14 @@ public class Knife4jConfig {
                 .groupName("1.0.0 版本")
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.luoyu.knife4j.test1controller" + SPLITOR
-                        + "com.luoyu.knife4j.test2controller" + SPLITOR ))
+                .apis(basePackage("com.luoyu.knife4j.controller.test1" + SPLITOR
+                        + "com.luoyu.knife4j.controller.test2" + SPLITOR ))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 配置token，以及设置扫描包的路径
      * @return Docket
      */
@@ -85,13 +85,13 @@ public class Knife4jConfig {
                 .groupName("2.0.0 版本")
                 .select()
                 //此处添加需要扫描接口的包路径
-                .apis(basePackage("com.luoyu.knife4j.test3controller" + SPLITOR ))
+                .apis(basePackage("com.luoyu.knife4j.controller.test3" + SPLITOR ))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 配置Knife4j页面显示内容
      * @return Docket
      */
@@ -106,7 +106,7 @@ public class Knife4jConfig {
     }
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 重写basePackage方法，使能够实现多包访问
      * @param basePackage 所有包路径
      * @return Predicate<RequestHandler>
@@ -116,7 +116,7 @@ public class Knife4jConfig {
     }
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 重写basePackage方法，使能够实现多包访问
      * @param basePackage 所有包路径
      * @return Function<Class<?>, Boolean>
@@ -136,7 +136,7 @@ public class Knife4jConfig {
     }
 
     /**
-     * @author jinhaoxun
+     * @author luoyu
      * @description 重写basePackage方法，使能够实现多包访问
      * @param input
      * @return Optional<? extends Class<?>>

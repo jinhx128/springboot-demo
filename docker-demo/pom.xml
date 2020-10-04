@@ -54,21 +54,34 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.4.0</version>
                 <configuration>
+                    <!-- 拉取所需的基础镜像 - 这里的jdk8，是用于运行springboot项目 -->
                     <from>
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
+                    <!-- 最后生成的镜像配置 -->
                     <to>
+                        <!-- push docer-hub官方仓库。用户名/镜像名：版本号 -->
                         <image>xxx/${project.name}</image>
+                        <!-- 如果是阿里云的容器镜像仓库，则使用容器的配置 前缀/命名空间/仓库名 -->
+                        <!--<image>registry.cn-chengdu.aliyuncs.com/renbaojia/ctfo</image>-->
                         <tags>
+                            <!--版本号-->
                             <tag>${project.version}</tag>
                         </tags>
                         <auth>
+                            <!--在docker-hub或者阿里云上的账号和密码-->
                             <username>xxx</username>
                             <password>xxx</password>
                         </auth>
                     </to>
                     <container>
+                        <!-- springboot项目的入口类 -->
                         <mainClass>com.luoyu.docker.DockerApplication</mainClass>
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                        <ports>
+                            <!-- 指定镜像端口 , 这里没用docfile的操作 -->
+                            <port>8082</port>
+                        </ports>
                     </container>
                 </configuration>
                 <executions>

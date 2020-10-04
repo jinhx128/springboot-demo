@@ -1,10 +1,10 @@
 ## 项目简介
-<b>基于 SpringBoot 2.2.5 整合各种常用开发工具，框架，中间件，缓存，日志，消息队列，定时任务，权限管理等。</b>
+<b>基于 SpringBoot 2.x 整合各种常用开发工具，框架，中间件，缓存，日志，消息队列，任务调度，监控管理等。</b>
 
 ## 参考教程
 |序号|文章标题|
 |:---:|:---|
-|01|[IDEA2020年最新全家桶通用激活码分享（持续更新）](https://www.jianshu.com/p/b148b93534a0)|
+|01|[IDEA2020年最新全家桶通用激活码分享（持续更新）](https://luoyublog.com/article/37)|
 |02|[springboot 2.2.5 整合MyBatis-Plus 3.3.1 详细教程，配置多数据源并支持事务，附带代码生成器使用教程](https://www.jianshu.com/p/5e4218d47578)|
 |03|[springboot 2.2.5 整合rocketmq，以最简单的方式操作RocketMQTemplate](https://www.jianshu.com/p/c66cd3a703dc)|
 |04|[springboot 2.2.5 整合redis，以最简单的方式操作RedisTemplate，附带RedisUtil工具类](https://www.jianshu.com/p/3ba1cb01407b)|

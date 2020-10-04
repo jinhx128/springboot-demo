@@ -1,12 +1,12 @@
 package com.luoyu.thymeleaf.service;
 
-import com.luoyu.thymeleaf.pojo.Test;
+import com.luoyu.thymeleaf.entity.Test;
 
 import java.util.List;
 
 /**
  * @Description:
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/4/12 下午1:23
  * @Version: 1.0.0
  */
