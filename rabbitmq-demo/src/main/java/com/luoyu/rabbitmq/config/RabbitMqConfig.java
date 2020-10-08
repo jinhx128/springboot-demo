@@ -56,7 +56,7 @@ public class RabbitMqConfig {
     }
 
     /**
-     *  REFRESH_ES_INDEX_QUEUE队列绑定交换机，指定routingKey
+     *  TEST1_QUEUE队列绑定交换机，指定routingKey
      */
     @Bean
     public Binding bindingEs(@Qualifier(RabbitMqConstants.TEST1_QUEUE) Queue queue,
@@ -65,7 +65,7 @@ public class RabbitMqConfig {
     }
 
     /**
-     *  INIT_LUOYUBLOG_GITALK_QUEUE队列绑定交换机，指定routingKey
+     *  TEST2_QUEUE队列绑定交换机，指定routingKey
      */
     @Bean
     public Binding bindingGitalk(@Qualifier(RabbitMqConstants.TEST2_QUEUE) Queue queue,

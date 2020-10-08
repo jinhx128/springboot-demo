@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 /*
  * @Description: Redis工具类，基于spring和redis的redisTemplate工具类。针对所有的hash，都是以h开头的方法。
  * 针对所有的Set，都是以s开头的方法。不含通用方法。针对所有的List，都是以l开头的方法
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/1/15 11:20
  * @Version: 1.0.0
  */
@@ -133,7 +133,7 @@ public class RedisUtil {
     /**
      * 递增 适用场景： https://blog.csdn.net/y_y_y_k_k_k_k/article/details/79218254 高并发生成订单号，秒杀类的业务逻辑等。。
      * @param key 键
-     * @param by 要增加几(大于0)
+     * @param delta 要增加几(大于0)
      * @return
      */
     public long incr(String key, long delta) {
@@ -146,7 +146,7 @@ public class RedisUtil {
     /**
      * 递减
      * @param key 键
-     * @param by 要减少几(小于0)
+     * @param delta 要减少几(小于0)
      * @return
      */
     public long decr(String key, long delta) {
@@ -524,7 +524,6 @@ public class RedisUtil {
      * 将list放入缓存
      * @param key 键
      * @param value 值
-     * @param time 时间(秒)
      * @return
      */
     public boolean lSet(String key, Object value) {
@@ -560,7 +559,6 @@ public class RedisUtil {
      * 将list放入缓存
      * @param key 键
      * @param value 值
-     * @param time 时间(秒)
      * @return
      */
     public boolean lSet(String key, List<Object> value) {

@@ -22,7 +22,9 @@ public class RabbitMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTemp
 
     private RabbitTemplate rabbitTemplate;
 
-    //构造方法注入
+    /**
+     * 构造方法注入
+     */
     @Autowired
     public RabbitMqUtils(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
@@ -33,7 +35,9 @@ public class RabbitMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTemp
         rabbitTemplate.setReturnCallback(this);
     }
 
-    //回调确认
+    /**
+     * 回调确认
+     */
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         if(ack){
@@ -43,7 +47,14 @@ public class RabbitMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTemp
         }
     }
 
-    //消息发送到转换器的时候没有对列,配置了备份对列该回调则不生效
+    /**
+     * 消息发送到转换器的时候没有对列,配置了备份对列该回调则不生效
+     * @param message
+     * @param replyCode
+     * @param replyText
+     * @param exchange
+     * @param routingKey
+     */
     @Override
     public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
         log.info("消息丢失：exchange({}),route({}),replyCode({}),replyText({}),message:{}",exchange,routingKey,replyCode,replyText,message);

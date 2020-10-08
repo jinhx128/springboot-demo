@@ -1,13 +1,13 @@
-package com.luoyu.rabbitmq.server.impl;
+package com.luoyu.rabbitmq.service.impl;
 
 import com.luoyu.rabbitmq.constants.RabbitMqConstants;
-import com.luoyu.rabbitmq.server.TestServer;
+import com.luoyu.rabbitmq.service.TestService;
 import com.luoyu.rabbitmq.util.RabbitMqUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TestServerImpl implements TestServer {
+public class TestServiceImpl implements TestService {
 
     @Autowired
     private RabbitMqUtils rabbitMqUtils;

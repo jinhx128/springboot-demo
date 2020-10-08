@@ -17,7 +17,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * @Description: redistemplate 配置
- * @Author: jinhaoxun
+ * @Author: luoyu
  * @Date: 2020/1/15 11:20
  * @Version: 1.0.0
  */
@@ -29,7 +29,7 @@ public class RedisConfig {
 //    private RedisConnectionFactory redisConnectionFactory;
 
     /**
-     * @author  jinhaoxun
+     * @author  luoyu
      * @description redisTemplate 序列化使用的jdkSerializeable, 存储二进制字节码, 所以自定义序列化类
      * @param redisConnectionFactory
      * @return RedisTemplate<Object, Object>

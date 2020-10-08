@@ -1,8 +1,6 @@
 package com.luoyu.rabbitmq.controller;
 
-import com.luoyu.rabbitmq.constants.RabbitMqConstants;
-import com.luoyu.rabbitmq.server.TestServer;
-import com.luoyu.rabbitmq.util.RabbitMqUtils;
+import com.luoyu.rabbitmq.service.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private TestServer testServer;
+    private TestService testService;
 
     /**
      * 发送消息test1
@@ -30,7 +28,7 @@ public class TestController {
      */
     @PostMapping(value = "/test1")
     public String sendTest1(@RequestBody String content) {
-        return testServer.sendTest1(content);
+        return testService.sendTest1(content);
     }
 
     /**
@@ -40,7 +38,7 @@ public class TestController {
      */
     @PostMapping(value = "/test2")
     public String sendTest2(@RequestBody String content) {
-        return testServer.sendTest2(content);
+        return testService.sendTest2(content);
     }
 
 }

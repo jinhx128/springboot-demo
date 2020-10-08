@@ -4,39 +4,32 @@ spring:
   application:
     name: rabbitmq-demo-server
   rabbitmq:
-    host: xxx
+    host: xxx # ip地址
     port: 5672
-    username: xxx
-    password: xxx
+    username: xxx # 连接账号
+    password: xxx # 连接密码
     template:
       retry:
-        # 开启失败重试
-        enabled: true
-        # 第一次重试的间隔时长
-        initial-interval: 10000ms
-        # 最长重试间隔，超过这个间隔将不再重试
-        max-interval: 300000ms
-        # 下次重试间隔的倍数，此处是2即下次重试间隔是上次的2倍
-        multiplier: 2
-      # 缺省的交换机名称，此处配置后，发送消息如果不指定交换机就会使用这个
-      exchange: topic.exchange
-    # 生产者确认机制，确保消息会正确发送，如果发送失败会有错误回执，从而触发重试
-    publisher-confirm-type: correlated
+        enabled: true # 开启失败重试
+        initial-interval: 10000ms # 第一次重试的间隔时长
+        max-interval: 300000ms # 最长重试间隔，超过这个间隔将不再重试
+        multiplier: 2 # 下次重试间隔的倍数，此处是2即下次重试间隔是上次的2倍
+      exchange: topic.exchange # 缺省的交换机名称，此处配置后，发送消息如果不指定交换机就会使用这个
+    publisher-confirm-type: correlated # 生产者确认机制，确保消息会正确发送，如果发送失败会有错误回执，从而触发重试
     publisher-returns: true
     listener:
       type: simple
       simple:
         acknowledge-mode: manual
-        prefetch: 1 #限制每次发送一条数据。
-        concurrency: 3 #同一个队列启动几个消费者
-        max-concurrency: 3 #启动消费者最大数量
-        #重试策略相关配置
+        prefetch: 1 # 限制每次发送一条数据。
+        concurrency: 3 # 同一个队列启动几个消费者
+        max-concurrency: 3 # 启动消费者最大数量
+        # 重试策略相关配置
         retry:
-          enabled: true #是否支持重试
+          enabled: true # 是否支持重试
           max-attempts: 5
           stateless: false
-          #时间策略乘数因子
-          multiplier: 1.0
+          multiplier: 1.0 # 时间策略乘数因子
           initial-interval: 1000ms
           max-interval: 10000ms
         default-requeue-rejected: true

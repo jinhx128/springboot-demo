@@ -39,21 +39,20 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<!-- RedisTemplate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.apache.commons</groupId>-->
-<!--			<artifactId>commons-pool2</artifactId>-->
-<!--		</dependency>-->
+
 		<!-- Jackson 工具 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.10.2</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

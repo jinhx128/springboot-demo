@@ -16,14 +16,7 @@ import com.rabbitmq.client.Channel;
 @Component
 public class RabbitMqListener {
 
-    @RabbitListener(bindings = @QueueBinding(
-            value = @Queue(value = RabbitMqConstants.TEST1_QUEUE, durable = "true"),
-            exchange = @Exchange(
-                    value = RabbitMqConstants.EXCHANGE_NAME,
-                    ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.TOPIC
-            ),
-            key = {RabbitMqConstants.TOPIC_TEST1_ROUTINGKEY}))
+    @RabbitListener(queues = RabbitMqConstants.TEST1_QUEUE)
     public void test1Consumer(Message message, Channel channel) {
         try {
             //手动确认消息已经被消费
@@ -35,14 +28,7 @@ public class RabbitMqListener {
         }
     }
 
-    @RabbitListener(bindings = @QueueBinding(
-            value = @Queue(value = RabbitMqConstants.TEST2_QUEUE, durable = "true"),
-            exchange = @Exchange(
-                    value = RabbitMqConstants.EXCHANGE_NAME,
-                    ignoreDeclarationExceptions = "true",
-                    type = ExchangeTypes.TOPIC
-            ),
-            key = {RabbitMqConstants.TOPIC_TEST2_ROUTINGKEY}))
+    @RabbitListener(queues = RabbitMqConstants.TEST2_QUEUE)
     public void test2Consumer(Message message, Channel channel) {
         try {
             //手动确认消息已经被消费

@@ -9,18 +9,18 @@ package com.luoyu.rabbitmq.constants;
  */
 public class RabbitMqConstants {
 
-    public static final String TEST1_QUEUE = "test1-queue";
+    public final static String TEST1_QUEUE = "test1-queue";
 
-    public static final String TEST2_QUEUE = "test2-queue";
+    public final static String TEST2_QUEUE = "test2-queue";
 
-    public static final String EXCHANGE_NAME = "test.topic.exchange";
+    public final static String EXCHANGE_NAME = "test.topic.exchange";
 
-    public static final String TOPIC_TEST1_ROUTINGKEY = "topic.test1.#";
+    public final static String TOPIC_TEST1_ROUTINGKEY = "topic.test1.*";
 
-    public static final String TOPIC_TEST1_ROUTINGKEY_TEST = "topic.test1.test";
+    public final static String TOPIC_TEST1_ROUTINGKEY_TEST = "topic.test1.test";
 
-    public static final String TOPIC_TEST2_ROUTINGKEY = "topic.test2.#";
+    public final static String TOPIC_TEST2_ROUTINGKEY = "topic.test2.*";
 
-    public static final String TOPIC_TEST2_ROUTINGKEY_TEST = "topic.test2.test";
+    public final static String TOPIC_TEST2_ROUTINGKEY_TEST = "topic.test2.test";
 
 }

@@ -1,6 +1,6 @@
-package com.luoyu.rabbitmq.server;
+package com.luoyu.rabbitmq.service;
 
-public interface TestServer {
+public interface TestService {
 
     String sendTest1(String content);
 

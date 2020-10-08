@@ -23,26 +23,23 @@ class RedisApplicationTests {
 	private RedisUtil redisUtil;
 
 	@Test
-	void setStringTest() {
+	void redisTemplateSetStringTest() {
 		redisTemplate.opsForValue().set("a","c");
 	}
 
 	@Test
-	void getStringTest() {
-		String value = redisTemplate.opsForValue().get("a").toString();
-		log.info(value);
+	void redisTemplateGetStringTest() {
+		log.info(redisTemplate.opsForValue().get("a").toString());
 	}
 
 	@Test
-	void deteleStringTest() {
+	void redisUtilDeteleStringTest() {
 		redisTemplate.delete("a");
 	}
 
 	@Test
-	void redisUtilGetTest() {
-		redisUtil.set("a","g");
-		String a = redisUtil.get("a").toString();
-		log.info(a);
+	void redisUtilGetStringTest() {
+		log.info(redisUtil.get("a").toString());
 	}
 
 	@BeforeEach
