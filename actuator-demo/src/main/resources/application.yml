@@ -9,6 +9,9 @@ spring:
     timeout-per-shutdown-phase: 20s # 默认时间为30S, 意味着最大等待30S，超时候无论线程任务是否执行完毕都会停机处理，一定要合理合理设置。
 
 management:
+  #  server:
+  #    # 设置监控服务端口,如果没写默认就是服务器的端口
+  #    port: 8081
   endpoint:
     health:
       show-details: always # 显示健康详情
