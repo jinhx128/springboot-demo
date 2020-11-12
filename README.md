@@ -1,10 +1,10 @@
 ## 项目简介
-<b>基于 SpringBoot 2.x 整合各种常用开发工具，框架，中间件，缓存，日志，消息队列，爬虫，任务调度，监控管理等。</b>
+基于SpringBoot 2.x整合各种常用开发工具，包括但不限于Redis，MyBatisPlus，RocketMQ，RabbitMQ，Elasticsearch，Quartz，Xxl-Job，Kafka等。
 
-## 相关教程
+## 参考教程
 |序号|文章标题|
 |:---:|:---|
-|00|[IDEA2020年最新全家桶通用激活码分享（持续更新）](https://www.jianshu.com/p/7b60d89a82cf)|
+|00|[IDEA2020年最新全家桶通用激活码分享（持续更新）](https://luoyublog.com/article/37)|
 |01|[SpringBoot 2.2.5 整合MyBatis-Plus 3.3.1 详细教程，配置多数据源并支持事务，附带代码生成器使用教程](https://www.jianshu.com/p/5e4218d47578)|
 |02|[SpringBoot 2.2.5 整合RocketMQ，实现消息的发送及消费](https://www.jianshu.com/p/c66cd3a703dc)|
 |03|[SpringBoot 2.2.5 整合Redis，并配置SpringCache缓存功能，附带RedisUtil工具类](https://www.jianshu.com/p/3ba1cb01407b)|
