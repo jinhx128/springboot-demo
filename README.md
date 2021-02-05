@@ -27,6 +27,9 @@
 |20|[SpringBoot 2.2.5 配置自定义线程池，并使用@Async执行异步方法，@Scheduled实现定时任务](https://www.jianshu.com/p/4001ff95dddc)|
 |21|[SpringBoot 2.2.5 整合RabbitMQ，实现Topic主题模式的消息发送及消费](https://www.jianshu.com/p/3f61f4ac165f)|
 |22|[SpringBoot 2.2.5 整合Xxl-Job，实现各种任务调度](https://www.jianshu.com/p/20ac45a76fde)|
+|23|[SpringBoot 2.2.5 整合ZXing，生成自己想要二维码](https://www.jianshu.com/p/c9beef499334)|
+|24|[SpringBoot 2.2.5 整合Minio，实现文件云存储功能，附带整理好的工具类](https://www.jianshu.com/p/8440d6034c3d)|
+
 
 ## 关于作者
 【<b>个人博客</b>】    【<b><a href="https://luoyublog.com"> https://luoyublog.com </a></b>】<br/>
