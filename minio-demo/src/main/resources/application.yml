@@ -1,0 +1,15 @@
+server:
+  port: 8188
+
+spring:
+  application:
+    name: minio-demo-server
+
+# minio配置
+minio:
+  # minio地址
+  endpoint: https://xxx
+  # minio accessKey
+  accessKey: xxx
+  # minio secretKey
+  secretKey: xxx

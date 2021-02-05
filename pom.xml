@@ -43,6 +43,8 @@
         <module>xxljob-demo</module>
         <module>mail-demo</module>
         <module>sms-demo</module>
+        <module>minio-demo</module>
+        <module>zxing-demo</module>
     </modules>
 
 </project>
