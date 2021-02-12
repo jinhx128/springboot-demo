@@ -27,7 +27,7 @@
         <module>logback-demo</module>
         <module>thymeleaf-demo</module>
         <module>webmagic-demo</module>
-        <module>multipledatasources-demo</module>
+        <module>staticmultipledatasources-demo</module>
         <module>swagger-demo</module>
         <module>knife4j-demo</module>
         <module>threadpool-demo</module>
@@ -45,6 +45,8 @@
         <module>sms-demo</module>
         <module>minio-demo</module>
         <module>zxing-demo</module>
+        <module>fileoperation-demo</module>
+        <module>dynamicmultipledatasources-demo</module>
     </modules>
 
 </project>

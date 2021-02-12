@@ -1,0 +1,30 @@
+spring:
+  # 配置数据源
+  datasource:
+    db1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://xxx:3306/db1?useUnicode=true&characterEncoding=utf-8
+      username: xxx
+      password: xxx
+    db2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://xxx:3306/db2?useUnicode=true&characterEncoding=utf-8
+      username: xxx
+      password: xxx
+  application:
+    name: dynamicmultipledatasources-demo-server
+
+# mybatis-plus相关配置
+mybatis-plus:
+  configuration:
+    #不开启二级缓存
+    cache-enabled: false
+    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    map-underscore-to-camel-case: true
+    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    call-setters-on-nulls: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8189

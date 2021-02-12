@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luoyu.staticmultipledatasources.mapper.db2.TaskMapper">
+
+    <select id="selectById" parameterType="java.lang.Integer" resultType="com.luoyu.staticmultipledatasources.entity.Task">
+        select * from task where id = #{id};
+    </select>
+
+    <update id="updateName">
+        update task set name = #{name} where id = #{id};
+    </update>
+    
+</mapper>
