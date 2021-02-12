@@ -1,13 +1,13 @@
-package com.luoyu.fileoperation;
+package com.luoyu.file;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FileOperationApplication {
+public class FileApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FileOperationApplication.class, args);
+        SpringApplication.run(FileApplication.class, args);
     }
 
 }

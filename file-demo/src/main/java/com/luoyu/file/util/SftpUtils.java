@@ -1,4 +1,4 @@
-package com.luoyu.filetransmission.util.sftputil;
+package com.luoyu.file.util;
 
 import com.jcraft.jsch.*;
 import org.apache.commons.io.IOUtils;
@@ -15,7 +15,7 @@ import java.util.Vector;
  * @Date: 2020/1/16 16:13
  * @Version: 1.0.0
  */
-public class SftpUtil {
+public class SftpUtils {
 
     /**
      * @Author: jinhaoxun

@@ -1,4 +1,4 @@
-package com.luoyu.filetransmission.util.ftputil;
+package com.luoyu.file.util;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
@@ -13,7 +13,7 @@ import java.io.*;
  * @Date: 2020/1/16 15:46
  * @Version: 1.0.0
  */
-public class FtpUtil {
+public class FtpUtils {
 
     /**
      * @Author: jinhaoxun

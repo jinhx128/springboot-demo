@@ -29,6 +29,8 @@
 |22|[SpringBoot 2.2.5 整合Xxl-Job，实现各种任务调度](https://www.jianshu.com/p/20ac45a76fde)|
 |23|[SpringBoot 2.2.5 整合ZXing，生成自己想要二维码](https://www.jianshu.com/p/c9beef499334)|
 |24|[SpringBoot 2.2.5 整合Minio，实现文件云存储功能，附带整理好的工具类](https://www.jianshu.com/p/8440d6034c3d)|
+|25|[SpringBoot 2.2.5 使用静态方式配置多数据源，并支持事务](https://www.jianshu.com/p/c34ddb0f3a93)|
+|26|[SpringBoot 2.2.5 使用AOP方式配置多数据源动态切换，并支持事务](https://www.jianshu.com/p/6a77ce8b1994)|
 
 
 ## 关于作者

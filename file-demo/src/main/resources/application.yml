@@ -3,4 +3,4 @@ server:
 
 spring:
   application:
-    name: filetransmission-demo-server
+    name: file-demo-server

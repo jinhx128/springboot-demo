@@ -20,7 +20,7 @@
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
         <module>exception-demo</module>
-        <module>filetransmission-demo</module>
+        <module>file-demo</module>
         <module>redis-demo</module>
         <module>rocketmq-demo</module>
         <module>mybatisplus-demo</module>
@@ -45,7 +45,6 @@
         <module>sms-demo</module>
         <module>minio-demo</module>
         <module>zxing-demo</module>
-        <module>fileoperation-demo</module>
         <module>dynamicmultipledatasources-demo</module>
     </modules>
 
