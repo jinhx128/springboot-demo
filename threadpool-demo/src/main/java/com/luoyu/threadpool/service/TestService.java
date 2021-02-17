@@ -10,4 +10,6 @@ public interface TestService {
 
     void test4();
 
+    void test5() throws Exception;
+
 }

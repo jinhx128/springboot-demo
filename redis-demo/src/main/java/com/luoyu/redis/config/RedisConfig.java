@@ -25,9 +25,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @EnableCaching
 public class RedisConfig {
 
-//    @Autowired
-//    private RedisConnectionFactory redisConnectionFactory;
-
     /**
      * @author  luoyu
      * @description redisTemplate 序列化使用的jdkSerializeable, 存储二进制字节码, 所以自定义序列化类
@@ -44,7 +41,8 @@ public class RedisConfig {
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
+        // 指定序列化输入的类型，类必须是非final修饰的，final修饰的类，比如String,Integer等会跑出异常，保留这行会报错：Unexpected token (VALUE_STRING)
+//        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
 
         jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
 
@@ -52,6 +50,7 @@ public class RedisConfig {
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
         redisTemplate.afterPropertiesSet();
+        redisTemplate.setConnectionFactory(redisConnectionFactory);
         return redisTemplate;
     }
 
@@ -71,6 +70,7 @@ public class RedisConfig {
 //        Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
 //        ObjectMapper objectMapper = new ObjectMapper();
 //        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+          // 指定序列化输入的类型，类必须是非final修饰的，final修饰的类，比如String,Integer等会跑出异常，保留这行会报错：Unexpected token (VALUE_STRING)
 //        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
 //        serializer.setObjectMapper(objectMapper);
 //        return RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(serializer));

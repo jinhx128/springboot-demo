@@ -29,7 +29,11 @@ class ThreadpoolApplicationTests {
     @Test
     void test4(){
         testService.test4();
+    }
 
+    @Test
+    void test5() throws Exception {
+        testService.test5();
     }
 
     @BeforeEach

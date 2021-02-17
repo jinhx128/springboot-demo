@@ -2,6 +2,8 @@ package com.luoyu.redis.service;
 
 import com.luoyu.redis.entity.Test;
 
+import java.util.List;
+
 public interface TestService {
 
     Test get(String id);
@@ -11,5 +13,11 @@ public interface TestService {
     boolean delete(String id);
 
     boolean update(Test test);
+
+    List<Test> gets();
+
+    void sets(List<Test> tests);
+
+    void deletes();
 
 }
