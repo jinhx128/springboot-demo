@@ -5,6 +5,7 @@ import com.luoyu.dynamicmultipledatasources.aop.ChangeDataSource;
 import com.luoyu.dynamicmultipledatasources.entity.Task;
 import com.luoyu.dynamicmultipledatasources.mapper.TaskMapper;
 import com.luoyu.dynamicmultipledatasources.service.ITaskService;
+import com.luoyu.dynamicmultipledatasources.util.SpringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,28 @@ public class TaskServiceImpl extends ServiceImpl<TaskMapper, Task> implements IT
 
     @Resource
     private TaskMapper taskMapper;
+
+    /**
+     * @Author: jinhaoxun
+     * @Description: 解决内部方法调用AOP失效问题
+     * @param id id
+     * @Date: 2020/2/13 下午12:06
+     * @Throws:
+     */
+    @Override
+    public Task selectByInside(Integer id) {
+        return this.getProxy().selectById(id);
+    }
+
+    /**
+     * @Author: jinhaoxun
+     * @Description: 从spring容器里手动拿到AOP代理类，解决AOP失效问题
+     * @Date: 2020/2/13 下午12:06
+     * @Throws:
+     */
+    private TaskServiceImpl getProxy(){
+        return SpringUtils.getBean(this.getClass());
+    }
 
     /**
      * @Author: jinhaoxun

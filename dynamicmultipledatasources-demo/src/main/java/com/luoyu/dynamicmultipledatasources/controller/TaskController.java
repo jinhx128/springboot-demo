@@ -39,4 +39,12 @@ public class TaskController {
 
     }
 
+    /**
+     * 测试解决内部方法调用AOP失效问题
+     */
+    @GetMapping(value = "/taskByInside")
+    public Task getTaskByInside(@RequestParam("id") Integer id) {
+        return iTaskService.selectByInside(id);
+    }
+
 }

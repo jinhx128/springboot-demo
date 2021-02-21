@@ -15,6 +15,15 @@ public interface ITaskService extends IService<Task> {
 
     /**
      * @Author: jinhaoxun
+     * @Description: 解决内部方法调用AOP失效问题
+     * @param id id
+     * @Date: 2020/2/13 下午12:06
+     * @Throws:
+     */
+    Task selectByInside(Integer id);
+
+    /**
+     * @Author: jinhaoxun
      * @Description:
      * @param id id
      * @Date: 2020/2/13 下午12:06
