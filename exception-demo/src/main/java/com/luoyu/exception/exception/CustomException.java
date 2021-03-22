@@ -31,4 +31,5 @@ public class CustomException extends Exception implements Serializable {
 		this.code = code;
 		this.log = log;
 	}
+
 }

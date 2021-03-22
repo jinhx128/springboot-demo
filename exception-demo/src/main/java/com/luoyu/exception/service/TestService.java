@@ -8,5 +8,8 @@ package com.luoyu.exception.service;
  */
 public interface TestService {
 
-    void get() throws Exception;
+    void get1() throws Exception;
+
+    void get2() throws Exception;
+
 }

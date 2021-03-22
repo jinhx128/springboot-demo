@@ -1,9 +1,8 @@
 package com.luoyu.exception.controller;
 
+import com.luoyu.exception.entity.vo.Response;
 import com.luoyu.exception.service.TestService;
-import com.luoyu.exception.vo.http.HttpResponse;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,25 +19,26 @@ import javax.annotation.Resource;
 public class TestController {
 
     @Resource
-    TestService testService;
+    private TestService testService;
 
     /**
      * @author jinhaoxun
      * @description 测试接口1
      */
-    @PostMapping(value = "/get1", produces = "application/json; charset=UTF-8")
-    public HttpResponse get1() throws Exception {
-        testService.get();
-        return HttpResponse.build(200, "成功！", null);
+    @GetMapping("/get1")
+    public Response get1() throws Exception {
+        testService.get1();
+        return Response.success();
     }
 
     /**
      * @author jinhaoxun
      * @description 测试接口2
      */
-    @PostMapping(value = "/get2", produces = "application/json; charset=UTF-8")
-    public HttpResponse get2() throws Exception {
-        return HttpResponse.build(200, "成功！", null);
+    @GetMapping("/get2")
+    public Response get2() throws Exception {
+        testService.get2();
+        return Response.success();
     }
 
 }
