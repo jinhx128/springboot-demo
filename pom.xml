@@ -20,7 +20,6 @@
         <module>quartz-demo</module>
         <module>easyexcel-demo</module>
         <module>exception-demo</module>
-        <module>file-demo</module>
         <module>redis-demo</module>
         <module>rocketmq-demo</module>
         <module>mybatisplus-demo</module>

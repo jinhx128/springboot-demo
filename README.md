@@ -8,7 +8,7 @@
 |01|[SpringBoot 2.2.5 整合MyBatis-Plus 3.3.1 详细教程，配置多数据源并支持事务，附带代码生成器使用教程](https://www.jianshu.com/p/5e4218d47578)|
 |02|[SpringBoot 2.2.5 整合RocketMQ，实现消息的发送及消费](https://www.jianshu.com/p/c66cd3a703dc)|
 |03|[SpringBoot 2.2.5 整合Redis，并配置SpringCache缓存功能，及使用Pipelined管道功能进行批量操作](https://www.jianshu.com/p/3ba1cb01407b)|
-|04|[SpringBoot 2.2.5 使用Sftp和Ftp两种方式，实现对文件的上传和下载](https://www.jianshu.com/p/2b169db088be)|
+|04|[SpringBoot项目自定义异常，配置全局异常统一处理，避免出现大量try/catch的问题](https://www.jianshu.com/p/ceae1211e88e)|
 |05|[SpringBoot 2.2.5 整合阿里开源框架EasyExcel 2.1.6，附带整理好的Excel操作工具类，Excel文件转csv格式工具类](https://www.jianshu.com/p/2fe693313e02)|
 |06|[SpringBoot 2.2.5 整合Quartz，配置动态增删改查定时任务，并解决Job中不能注入Bean问题](https://www.jianshu.com/p/ca2bfbdfee68)|
 |07|[SpringBoot 2.2.5 整合Swagger 2.9.2，实现扫描多个不同包的接口，并配置支持传参Token进行验证](https://www.jianshu.com/p/7386a0e04ca8)|
