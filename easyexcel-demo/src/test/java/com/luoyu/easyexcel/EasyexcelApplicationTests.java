@@ -5,9 +5,11 @@ import com.alibaba.excel.support.ExcelTypeEnum;
 import com.luoyu.easyexcel.entity.ExcelModel;
 import com.luoyu.easyexcel.entity.ExcelModel1;
 import com.luoyu.easyexcel.entity.ExcelModel2;
+import com.luoyu.easyexcel.entity.ExcelModel3;
 import com.luoyu.easyexcel.util.DataConvertUtil;
 import com.luoyu.easyexcel.util.ExcelConvertCsvUtil;
 import com.luoyu.easyexcel.util.ExcelUtil;
+import com.luoyu.easyexcel.util.JacksonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,11 +30,11 @@ class EasyexcelApplicationTests {
     @Test
     void readExcelTest() throws Exception {
         //读取excel
-        File file = new File("E:\\2.xlsx");
+        File file = new File("/Users/luoyu/Downloads/test1.xlsx");
         InputStream inputStream = new FileInputStream(file);
         //导入excle
-        List<ExcelModel> datas = ExcelUtil.readExcel(inputStream, ExcelModel.class, ExcelTypeEnum.XLSX);
-        log.info(datas.toString());
+        List<ExcelModel3> datas = ExcelUtil.readExcel(inputStream, ExcelModel3.class, ExcelTypeEnum.XLSX);
+        log.info(JacksonUtils.objectToJson(datas));
     }
 
     @Test
