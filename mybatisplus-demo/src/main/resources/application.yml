@@ -56,7 +56,7 @@ mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
   mapper-locations: classpath:com/luoyu/mybatisplus/mapper/xml/*.xml
   # 别名包扫描路径，通过该属性可以给包中的类注册别名
-  type-aliases-package: com.luoyu.mybatisplus.project.entity
+  type-aliases-package: com.luoyu.mybatisplus.entity
   # 以下配置均有默认值,可以不设置
   global-config:
     db-config:

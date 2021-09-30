@@ -45,6 +45,7 @@
         <module>minio-demo</module>
         <module>zxing-demo</module>
         <module>dynamicmultipledatasources-demo</module>
+        <module>shardingjdbc-demo</module>
     </modules>
 
 </project>
