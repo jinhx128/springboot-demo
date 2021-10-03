@@ -25,25 +25,28 @@ spring:
           slave-data-source-names: salve
       # 表分片
       tables:
-        user:
+        my_order:
           # 主表分片规则表名
-          actual-data-nodes: master.user_$->{0..3}
+          actual-data-nodes: master.my_order_$->{0..3}
           # 主键策略
 #          key-generator:
 #            column: id
 #            type: MyShardingKeyGenerator
           table-strategy:
+            # 行表达式分片
 #            inline:
-#              algorithm-expression: user_$->{id.longValue() % 4}
+#              algorithm-expression: order_$->{id.longValue() % 4}
 #              sharding-column: id
+            # 标准分片
 #            standard:
 #              sharding-column: id
 #              precise-algorithm-class-name: com.jinhx.shardingjdbc.config.MyPreciseShardingAlgorithm
             # 复合分片
             complex:
-              sharding-columns: id,age
+              # 分片键
+              sharding-columns: order_id,user_id
               algorithm-class-name: com.jinhx.shardingjdbc.config.MyComplexKeysShardingAlgorithm
-          defaultTableStrategy:
+#          defaultTableStrategy:
     # 打开sql控制台输出日志
     props:
       sql:
@@ -55,17 +58,8 @@ mybatis-plus:
   mapper-locations: classpath:com/jinhx/shardingjdbc/mapper/xml/*.xml
   # 别名包扫描路径，通过该属性可以给包中的类注册别名
   type-aliases-package: com.jinhx.shardingjdbc.entity
-  # 以下配置均有默认值,可以不设置
-  global-config:
-    db-config:
-      #主键类型  auto:"数据库ID自增" 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
-      id-type: auto
-      #字段策略 IGNORED:"忽略判断"  NOT_NULL:"非 NULL 判断")  NOT_EMPTY:"非空判断"
-      field-strategy: NOT_EMPTY
-      #数据库类型
-      db-type: MYSQL
   configuration:
-    #不开启二级缓存
+    # 不开启二级缓存
     cache-enabled: false
     # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
     map-underscore-to-camel-case: true

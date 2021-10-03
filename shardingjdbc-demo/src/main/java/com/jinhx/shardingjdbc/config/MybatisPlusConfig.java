@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * Mybatis-Plus配置类
  *
  * @author jinhx
- * @date 2021-07-27
+ * @since 2021-07-27
  */
 @EnableTransactionManagement
 @Configuration

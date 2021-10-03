@@ -1,13 +1,16 @@
 package com.jinhx.shardingjdbc;
 
-import com.jinhx.shardingjdbc.entity.User;
-import com.jinhx.shardingjdbc.service.IUserService;
+import com.jinhx.shardingjdbc.entity.Order;
+import com.jinhx.shardingjdbc.service.IOrderService;
 import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @Slf4j
 // 获取启动类，加载配置，确定装载 Spring 程序的装载方法，它回去寻找 主配置启动类（被 @SpringBootApplication 注解的）
@@ -15,33 +18,32 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ShardingjdbcApplicationTests {
 
     @Autowired
-    private IUserService iUserService;
+    private IOrderService iOrderService;
 
     @Test
-    void selectByIdTest() {
-        for (long i = 1;i < 100;i++){
-            log.info(iUserService.selectById(i).toString());
-        }
+    void selectByOrderIdsTest() {
+        List<Long> orderIds = Lists.newArrayList(1443844581547311109L, 1443844581547442181L, 1443844581547573255L, 1443844581547704327L);
+        log.info(iOrderService.selectByOrderIds(orderIds).toString());
     }
 
     @Test
-    void selectByIdAgeTest() {
-        for (Long i = 1L;i < 100;i++){
-            log.info(iUserService.selectByAge(i).toString());
-        }
+    void selectByUserIdsTest() {
+        List<Long> userIds = Lists.newArrayList(1443844581547311108L, 1443844581547311106L, 1443844581547442180L, 1443844581547704326L);
+        log.info(iOrderService.selectByUserIds(userIds).toString());
     }
 
     @Test
-    void insertUserTest() {
-        for (Long i = 1L;i < 100;i++){
-            User user = new User();
-            user.setAge(i);
-            user.setName("name" + i);
-            user.setEmail(i+ "@test.com");
-            user.setId();
-            iUserService.insertUser(user);
-            log.info(user.toString());
+    void insertOrdersTest() {
+        List<Order> orders = Lists.newArrayList();
+        for (int i = 1;i < 100;i++){
+            Order order = new Order();
+            order.buildUserId(i);
+            order.setMoney(i * 1000L);
+            order.buildOrderId();
+            orders.add(order);
         }
+        log.info("orders={}", orders);
+        iOrderService.insertOrders(orders);
     }
 
     @BeforeEach

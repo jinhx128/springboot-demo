@@ -13,9 +13,11 @@
     <version>1.0.0</version>
     <name>shardingjdbc-demo</name>
     <description>Sharding-JDBC Demo</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

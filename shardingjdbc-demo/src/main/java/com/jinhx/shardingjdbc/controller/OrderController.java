@@ -1,17 +1,16 @@
 package com.jinhx.shardingjdbc.controller;
 
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * UserController
+ * OrderController
  *
  * @author jinhx
- * @date 2021-07-27
+ * @since 2021-07-27
  */
 @RestController
-@RequestMapping("/generator/user")
-public class UserController {
+@RequestMapping("/order")
+public class OrderController {
 
 }

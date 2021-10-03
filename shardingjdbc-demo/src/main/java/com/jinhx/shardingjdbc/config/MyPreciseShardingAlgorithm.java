@@ -10,7 +10,7 @@ import java.util.Collection;
  * 重写Sharding-JDBC分片算法
  *
  * @author jinhx
- * @date 2021-07-27
+ * @since 2021-07-27
  */
 @Slf4j
 public class MyPreciseShardingAlgorithm implements PreciseShardingAlgorithm<Integer> {

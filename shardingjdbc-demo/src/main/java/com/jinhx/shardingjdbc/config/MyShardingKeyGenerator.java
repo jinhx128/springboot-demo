@@ -12,7 +12,7 @@ import java.util.Properties;
  * 自定义Sharding-JDBC生成分布式主键id
  *
  * @author jinhx
- * @date 2021-07-27
+ * @since 2021-07-27
  */
 @Setter
 @Getter
@@ -24,8 +24,8 @@ public class MyShardingKeyGenerator implements ShardingKeyGenerator {
     @Override
     public Comparable<?> generateKey() {
         Long id = SnowFlakeUtil.getSnowflakeId();
-        log.info("自定义的id：{}", id);
-        return 1;
+        log.info("自定义的id={}", id);
+        return id;
     }
 
     @Override

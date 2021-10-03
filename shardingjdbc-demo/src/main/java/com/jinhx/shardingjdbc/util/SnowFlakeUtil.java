@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
  * 雪花算法工具类
  *
  * @author jinhx
- * @date 2021/7/24
+ * @since 2021/7/24
  */
 @Slf4j
 public class SnowFlakeUtil {
