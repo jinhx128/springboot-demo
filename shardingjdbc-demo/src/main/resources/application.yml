@@ -40,11 +40,13 @@ spring:
             # 标准分片
 #            standard:
 #              sharding-column: id
+              # 指定自定义分片算法类的全路径
 #              precise-algorithm-class-name: com.jinhx.shardingjdbc.config.MyPreciseShardingAlgorithm
             # 复合分片
             complex:
               # 分片键
               sharding-columns: order_id,user_id
+              # 指定自定义分片算法类的全路径
               algorithm-class-name: com.jinhx.shardingjdbc.config.MyComplexKeysShardingAlgorithm
 #          defaultTableStrategy:
     # 打开sql控制台输出日志
